@@ -1,0 +1,5 @@
+version: 1
+bundleID: com.ronicley.quadrolivre
+product: QuadroLivre
+infoPath: Support/Info.plist
+iconPath: Support/AppIcon.png

@@ -1,0 +1,11 @@
+{
+  "id": "cat-natural",
+  "assetVersion": 2,
+  "status": "approved-as-visual-reference",
+  "approvalRecord": "approval.json",
+  "catalogID": "cat-seated",
+  "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+  "source": "scripts/make_natural_cat_sample.py",
+  "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+  "runtimeIntegrated": true
+}

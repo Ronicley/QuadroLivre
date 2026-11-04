@@ -1,0 +1,9 @@
+{
+  "status": "approved-as-visual-reference",
+  "scope": "Par de gato revisado no navegador; não é aprovação dos demais temas ou dos testes PencilKit no iPad.",
+  "responsibleFeedback": "ok, ficou bom",
+  "sources": {
+    "cat-natural-v2-trace.svg": "80c63814756b445549cdb2c61d15c90621f60c9593cc5c1865ba12af11a2b311",
+    "cat-natural-v2-coloring.svg": "a748190db5ea54d864f8ba8f70415a79bacb6e27443006f96d21990413bdc950"
+  }
+}

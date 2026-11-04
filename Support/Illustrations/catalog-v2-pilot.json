@@ -1,0 +1,306 @@
+{
+  "version": 2,
+  "stage": "pilot-awaiting-approval",
+  "categories": [
+    {
+      "id": "A",
+      "title": "Gatos e casinhas mágicas",
+      "symbol": "cat"
+    },
+    {
+      "id": "B",
+      "title": "Bichinhos amigos",
+      "symbol": "pawprint"
+    },
+    {
+      "id": "C",
+      "title": "Jardim e natureza",
+      "symbol": "leaf"
+    },
+    {
+      "id": "D",
+      "title": "Amizade e brincadeiras",
+      "symbol": "figure.2"
+    },
+    {
+      "id": "E",
+      "title": "Pequenos mundos",
+      "symbol": "house"
+    },
+    {
+      "id": "F",
+      "title": "Quatro elementos",
+      "symbol": "wind"
+    },
+    {
+      "id": "G",
+      "title": "Momentos aconchegantes",
+      "symbol": "book"
+    },
+    {
+      "id": "H",
+      "title": "Veículos e passeios",
+      "symbol": "car"
+    },
+    {
+      "id": "I",
+      "title": "Mar e fantasia",
+      "symbol": "fish"
+    },
+    {
+      "id": "J",
+      "title": "Comidinhas e celebrações",
+      "symbol": "birthday.cake"
+    }
+  ],
+  "items": [
+    {
+      "id": "cat-seated",
+      "title": "Gatinho sentado",
+      "category": "A",
+      "complexity": "intermediate",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "cat-seated-v2-trace",
+          "thumbnail": "cat-seated-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-seated-v2-coloring",
+          "thumbnail": "cat-seated-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "approved-reference"
+    },
+    {
+      "id": "child-rabbit",
+      "title": "Criança com coelho de pelúcia",
+      "category": "D",
+      "complexity": "intermediate",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "child-rabbit-v2-trace",
+          "thumbnail": "child-rabbit-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "child-rabbit-v2-coloring",
+          "thumbnail": "child-rabbit-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "awaiting-approval"
+    },
+    {
+      "id": "dollhouse",
+      "title": "Casinha de boneca aberta",
+      "category": "E",
+      "complexity": "scene",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "dollhouse-v2-trace",
+          "thumbnail": "dollhouse-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "dollhouse-v2-coloring",
+          "thumbnail": "dollhouse-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "awaiting-approval"
+    },
+    {
+      "id": "air-adventure",
+      "title": "Aventureira com redemoinho de ar",
+      "category": "F",
+      "complexity": "intermediate",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "air-adventure-v2-trace",
+          "thumbnail": "air-adventure-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "air-adventure-v2-coloring",
+          "thumbnail": "air-adventure-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "awaiting-approval"
+    },
+    {
+      "id": "cat-reading",
+      "title": "Gatinho lendo no sofá",
+      "category": "G",
+      "complexity": "scene",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "cat-reading-v2-trace",
+          "thumbnail": "cat-reading-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-reading-v2-coloring",
+          "thumbnail": "cat-reading-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "awaiting-approval"
+    },
+    {
+      "id": "smiling-car",
+      "title": "Carrinho sorridente",
+      "category": "H",
+      "complexity": "intermediate",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "smiling-car-v2-trace",
+          "thumbnail": "smiling-car-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "smiling-car-v2-coloring",
+          "thumbnail": "smiling-car-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "awaiting-approval"
+    }
+  ],
+  "archivedItems": [
+    {
+      "id": "cat-seated",
+      "title": "Gatinho sentado",
+      "category": "A",
+      "complexity": "simple",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "cat-seated-v1-trace",
+          "thumbnail": "cat-seated-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-seated-v1-coloring",
+          "thumbnail": "cat-seated-v1-coloring-thumb"
+        }
+      }
+    },
+    {
+      "id": "child-rabbit",
+      "title": "Criança com coelho de pelúcia",
+      "category": "D",
+      "complexity": "intermediate",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "child-rabbit-v1-trace",
+          "thumbnail": "child-rabbit-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "child-rabbit-v1-coloring",
+          "thumbnail": "child-rabbit-v1-coloring-thumb"
+        }
+      }
+    },
+    {
+      "id": "dollhouse",
+      "title": "Casinha de boneca aberta",
+      "category": "E",
+      "complexity": "simple",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "dollhouse-v1-trace",
+          "thumbnail": "dollhouse-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "dollhouse-v1-coloring",
+          "thumbnail": "dollhouse-v1-coloring-thumb"
+        }
+      }
+    },
+    {
+      "id": "air-adventure",
+      "title": "Aventureira com redemoinho de ar",
+      "category": "F",
+      "complexity": "intermediate",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "air-adventure-v1-trace",
+          "thumbnail": "air-adventure-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "air-adventure-v1-coloring",
+          "thumbnail": "air-adventure-v1-coloring-thumb"
+        }
+      }
+    },
+    {
+      "id": "cat-reading",
+      "title": "Gatinho lendo no sofá",
+      "category": "G",
+      "complexity": "intermediate",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "cat-reading-v1-trace",
+          "thumbnail": "cat-reading-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-reading-v1-coloring",
+          "thumbnail": "cat-reading-v1-coloring-thumb"
+        }
+      }
+    },
+    {
+      "id": "smiling-car",
+      "title": "Carrinho sorridente",
+      "category": "H",
+      "complexity": "simple",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "smiling-car-v1-trace",
+          "thumbnail": "smiling-car-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "smiling-car-v1-coloring",
+          "thumbnail": "smiling-car-v1-coloring-thumb"
+        }
+      }
+    }
+  ]
+}

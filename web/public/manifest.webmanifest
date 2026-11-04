@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Quadro Livre",
+  "short_name": "Quadro Livre",
+  "lang": "pt-BR",
+  "description": "Desenho livre com caneta, salvo neste aparelho.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f4f4fb",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

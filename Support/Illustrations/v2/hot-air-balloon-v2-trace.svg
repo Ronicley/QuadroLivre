@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540">
+<title>Balão de ar quente — versão 2, trace</title>
+<g fill="none" stroke="#292d32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 237 338 C 218 289 128 234 143 161 C 155 70 376 64 394 161 C 412 235 321 289 303 338 Z"/>
+<path d="M 237 338 L 239 389 M 303 338 L 301 389"/>
+<path d="M 236 389 L 303 389 C 311 389 311 389 311 397 L 311 441 C 311 449 311 449 303 449 L 236 449 C 228 449 228 449 228 441 L 228 397 C 228 389 228 389 236 389 Z"/>
+</g></svg>

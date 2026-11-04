@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540">
+<title>Barquinho num lago tranquilo — versão 2, trace</title>
+<g fill="none" stroke="#292d32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 105 295 C 196 274 350 274 439 295 L 397 360 C 320 378 222 378 147 360 Z"/>
+<path d="M 105 295 C 192 316 350 316 439 295"/>
+<path d="M 189 290 L 184 309 L 218 312 L 222 286 M 323 286 L 328 312 L 361 309 L 357 290"/>
+<path d="M 117 298 L 72 348 L 86 359 L 131 302 M 412 302 L 461 358 L 475 347 L 427 297"/>
+<path d="M 81 397 C 156 420 363 421 458 394 M 118 436 C 213 450 338 448 422 435"/>
+<path d="M 97 231 L 132 166 L 162 226 M 372 226 L 405 170 L 445 238"/>
+</g></svg>

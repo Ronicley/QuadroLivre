@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540">
+<title>Castelo pequeno — versão 2, trace</title>
+<g fill="none" stroke="#292d32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 104 238 L 181 238 L 181 438 L 104 438 Z"/>
+<path d="M 360 238 L 437 238 L 437 438 L 360 438 Z"/>
+<path d="M 181 291 L 360 291 L 360 438 L 181 438 Z"/>
+<path d="M 89 238 L 142 136 L 196 238 Z M 345 238 L 398 136 L 452 238 Z"/>
+<path d="M 216 291 L 216 209 L 270 115 L 326 209 L 326 291 M 207 209 L 334 209"/>
+<path d="M 234 438 L 234 368 C 234 325 307 325 307 368 L 307 438"/>
+<path d="M 270 115 L 270 75 L 326 88 L 270 103"/>
+</g></svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540">
+<title>Templo nas nuvens — versão 2, trace</title>
+<g fill="none" stroke="#292d32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 145 249 L 268 147 L 394 249 Z M 165 249 L 165 361 L 376 361 L 376 249"/>
+<path d="M 132 361 L 405 361 L 405 383 L 132 383 Z M 120 383 L 418 383 L 418 405 L 120 405 Z"/>
+<path d="M 187 263 L 213 263 L 213 361 L 187 361 Z"/>
+<path d="M 329 263 L 355 263 L 355 361 L 329 361 Z"/>
+<path d="M 245 361 L 245 290 C 245 257 296 257 296 290 L 296 361"/>
+<path d="M 71 448 C 47.4 424.4 71 394.9 94.6 412.6 C 100.5 365.4 147.7 365.4 153.6 412.6 C 189 394.9 212.6 448 177.2 448 Z"/>
+<path d="M 325 448 C 301.4 424.4 325 394.9 348.6 412.6 C 354.5 365.4 401.7 365.4 407.6 412.6 C 443 394.9 466.6 448 431.2 448 Z"/>
+</g></svg>

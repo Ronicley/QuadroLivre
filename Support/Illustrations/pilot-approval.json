@@ -1,0 +1,7 @@
+{
+  "scope": "Seis pares-piloto V2 e direção visual; autorização para produzir o catálogo de 100 temas. Não é aprovação antecipada das outras 94 artes nem validação dos gestos no iPad.",
+  "responsibleFeedback": "ok, parece bom, pode fazer tbm os 100 temas",
+  "approvedThemeIDs": ["cat-seated", "child-rabbit", "dollhouse", "air-adventure", "cat-reading", "smiling-car"],
+  "sourceHashes": "v2-art-sha256.json",
+  "finalCatalogApproval": "pending"
+}

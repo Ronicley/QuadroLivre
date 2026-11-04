@@ -1,0 +1,13 @@
+{
+  "appVersion": "1.2.0",
+  "build": "120",
+  "themes": 100,
+  "presentations": 200,
+  "manifestSHA256": "ac4e09d59bada68f494d1167a1d41fe43156dea47a19d85b4a47977299aba0e7",
+  "artLockSHA256": "5bb97e2679e28b057f1cd1831df56bf92e38101fe3d910cc04a6235b3a52a5e4",
+  "installedBy": "xtool — Successfully installed!",
+  "uninstalledBeforeUpdate": false,
+  "finalVisualApproval": "pending",
+  "deviceInteractionAndMemoryTests": "pending",
+  "note": "Asset versions are now published. Do not revise V2 in place; corrections require a new version and preservation of the old files."
+}

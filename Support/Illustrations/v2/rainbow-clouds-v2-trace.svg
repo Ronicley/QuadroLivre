@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540">
+<title>Arco-íris com nuvens — versão 2, trace</title>
+<g fill="none" stroke="#292d32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 98 314 C 98 55 442 55 442 314"/>
+<path d="M 141 314 C 141 115 399 115 399 314"/>
+<path d="M 81 367 C 56.4 342.4 81 311.65 105.6 330.1 C 111.75 280.9 160.95 280.9 167.1 330.1 C 204 311.65 228.6 367 191.7 367 Z"/>
+<path d="M 330 367 C 305.4 342.4 330 311.65 354.6 330.1 C 360.75 280.9 409.95 280.9 416.1 330.1 C 453 311.65 477.6 367 440.7 367 Z"/>
+</g></svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540">
+<title>Sorvete de duas bolas — versão 2, trace</title>
+<g fill="none" stroke="#292d32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 178 288 L 270 458 L 362 288 Z"/>
+<path d="M 167 285 C 147 249 167 208 200 202 C 224 184 270 189 287 212 C 325 188 378 221 371 256 C 388 284 365 300 347 288 C 332 311 308 307 295 288 C 273 307 251 306 235 288 C 209 308 186 304 178 288 Z"/>
+<path d="M 202 202 C 174 179 186 128 221 117 C 250 95 296 105 308 135 C 342 142 350 178 330 202"/>
+</g></svg>

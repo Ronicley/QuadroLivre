@@ -1,0 +1,2380 @@
+{
+  "version": 2,
+  "stage": "catalog-awaiting-approval",
+  "categories": [
+    {
+      "id": "A",
+      "title": "Gatos e casinhas mágicas",
+      "symbol": "cat"
+    },
+    {
+      "id": "B",
+      "title": "Bichinhos amigos",
+      "symbol": "pawprint"
+    },
+    {
+      "id": "C",
+      "title": "Jardim e natureza",
+      "symbol": "leaf"
+    },
+    {
+      "id": "D",
+      "title": "Amizade e brincadeiras",
+      "symbol": "figure.2"
+    },
+    {
+      "id": "E",
+      "title": "Pequenos mundos",
+      "symbol": "house"
+    },
+    {
+      "id": "F",
+      "title": "Quatro elementos",
+      "symbol": "wind"
+    },
+    {
+      "id": "G",
+      "title": "Momentos aconchegantes",
+      "symbol": "book"
+    },
+    {
+      "id": "H",
+      "title": "Veículos e passeios",
+      "symbol": "car"
+    },
+    {
+      "id": "I",
+      "title": "Mar e fantasia",
+      "symbol": "fish"
+    },
+    {
+      "id": "J",
+      "title": "Comidinhas e celebrações",
+      "symbol": "birthday.cake"
+    }
+  ],
+  "items": [
+    {
+      "id": "cat-seated",
+      "title": "Gatinho sentado",
+      "category": "A",
+      "complexity": "simple",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "cat-seated-v2-trace",
+          "thumbnail": "cat-seated-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-seated-v2-coloring",
+          "thumbnail": "cat-seated-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "approved",
+      "number": 1
+    },
+    {
+      "id": "cat-yarn",
+      "title": "Gatinho brincando com novelo",
+      "category": "A",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cat-yarn-v2-trace",
+          "thumbnail": "cat-yarn-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-yarn-v2-coloring",
+          "thumbnail": "cat-yarn-v2-coloring-thumb"
+        }
+      },
+      "number": 2,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "cat-box",
+      "title": "Gatinho numa caixa",
+      "category": "A",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cat-box-v2-trace",
+          "thumbnail": "cat-box-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-box-v2-coloring",
+          "thumbnail": "cat-box-v2-coloring-thumb"
+        }
+      },
+      "number": 3,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "cat-party",
+      "title": "Gatinho com chapéu de festa",
+      "category": "A",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cat-party-v2-trace",
+          "thumbnail": "cat-party-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-party-v2-coloring",
+          "thumbnail": "cat-party-v2-coloring-thumb"
+        }
+      },
+      "number": 4,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "cats-friends",
+      "title": "Dois gatinhos amigos",
+      "category": "A",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cats-friends-v2-trace",
+          "thumbnail": "cats-friends-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cats-friends-v2-coloring",
+          "thumbnail": "cats-friends-v2-coloring-thumb"
+        }
+      },
+      "number": 5,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "cat-house",
+      "title": "Casinha em formato de gato",
+      "category": "A",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cat-house-v2-trace",
+          "thumbnail": "cat-house-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-house-v2-coloring",
+          "thumbnail": "cat-house-v2-coloring-thumb"
+        }
+      },
+      "number": 6,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "cat-room",
+      "title": "Quarto de um gatinho",
+      "category": "A",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cat-room-v2-trace",
+          "thumbnail": "cat-room-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-room-v2-coloring",
+          "thumbnail": "cat-room-v2-coloring-thumb"
+        }
+      },
+      "number": 7,
+      "complexity": "scene"
+    },
+    {
+      "id": "cat-baker",
+      "title": "Gatinho confeiteiro",
+      "category": "A",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cat-baker-v2-trace",
+          "thumbnail": "cat-baker-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-baker-v2-coloring",
+          "thumbnail": "cat-baker-v2-coloring-thumb"
+        }
+      },
+      "number": 8,
+      "complexity": "scene"
+    },
+    {
+      "id": "cat-garden",
+      "title": "Gatinho no jardim",
+      "category": "A",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cat-garden-v2-trace",
+          "thumbnail": "cat-garden-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-garden-v2-coloring",
+          "thumbnail": "cat-garden-v2-coloring-thumb"
+        }
+      },
+      "number": 9,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "cat-stars",
+      "title": "Gatinho observando estrelas",
+      "category": "A",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cat-stars-v2-trace",
+          "thumbnail": "cat-stars-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-stars-v2-coloring",
+          "thumbnail": "cat-stars-v2-coloring-thumb"
+        }
+      },
+      "number": 10,
+      "complexity": "scene"
+    },
+    {
+      "id": "puppy-ball",
+      "title": "Cachorrinho com bola",
+      "category": "B",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "puppy-ball-v2-trace",
+          "thumbnail": "puppy-ball-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "puppy-ball-v2-coloring",
+          "thumbnail": "puppy-ball-v2-coloring-thumb"
+        }
+      },
+      "number": 11,
+      "complexity": "simple"
+    },
+    {
+      "id": "rabbit-carrot",
+      "title": "Coelho com cenoura",
+      "category": "B",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "rabbit-carrot-v2-trace",
+          "thumbnail": "rabbit-carrot-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "rabbit-carrot-v2-coloring",
+          "thumbnail": "rabbit-carrot-v2-coloring-thumb"
+        }
+      },
+      "number": 12,
+      "complexity": "simple"
+    },
+    {
+      "id": "bear-seated",
+      "title": "Ursinho sentado",
+      "category": "B",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "bear-seated-v2-trace",
+          "thumbnail": "bear-seated-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "bear-seated-v2-coloring",
+          "thumbnail": "bear-seated-v2-coloring-thumb"
+        }
+      },
+      "number": 13,
+      "complexity": "simple"
+    },
+    {
+      "id": "fox-smile",
+      "title": "Raposinha sorridente",
+      "category": "B",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "fox-smile-v2-trace",
+          "thumbnail": "fox-smile-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "fox-smile-v2-coloring",
+          "thumbnail": "fox-smile-v2-coloring-thumb"
+        }
+      },
+      "number": 14,
+      "complexity": "simple"
+    },
+    {
+      "id": "elephant-flower",
+      "title": "Elefantinho com flor",
+      "category": "B",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "elephant-flower-v2-trace",
+          "thumbnail": "elephant-flower-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "elephant-flower-v2-coloring",
+          "thumbnail": "elephant-flower-v2-coloring-thumb"
+        }
+      },
+      "number": 15,
+      "complexity": "simple"
+    },
+    {
+      "id": "lion-round-mane",
+      "title": "Leão de juba redonda",
+      "category": "B",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "lion-round-mane-v2-trace",
+          "thumbnail": "lion-round-mane-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "lion-round-mane-v2-coloring",
+          "thumbnail": "lion-round-mane-v2-coloring-thumb"
+        }
+      },
+      "number": 16,
+      "complexity": "simple"
+    },
+    {
+      "id": "small-giraffe",
+      "title": "Girafa pequena",
+      "category": "B",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "small-giraffe-v2-trace",
+          "thumbnail": "small-giraffe-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "small-giraffe-v2-coloring",
+          "thumbnail": "small-giraffe-v2-coloring-thumb"
+        }
+      },
+      "number": 17,
+      "complexity": "simple"
+    },
+    {
+      "id": "panda-bamboo",
+      "title": "Panda com bambu",
+      "category": "B",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "panda-bamboo-v2-trace",
+          "thumbnail": "panda-bamboo-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "panda-bamboo-v2-coloring",
+          "thumbnail": "panda-bamboo-v2-coloring-thumb"
+        }
+      },
+      "number": 18,
+      "complexity": "simple"
+    },
+    {
+      "id": "sloth-branch",
+      "title": "Preguiça num galho",
+      "category": "B",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "sloth-branch-v2-trace",
+          "thumbnail": "sloth-branch-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "sloth-branch-v2-coloring",
+          "thumbnail": "sloth-branch-v2-coloring-thumb"
+        }
+      },
+      "number": 19,
+      "complexity": "simple"
+    },
+    {
+      "id": "fluffy-sheep",
+      "title": "Ovelhinha fofa",
+      "category": "B",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "fluffy-sheep-v2-trace",
+          "thumbnail": "fluffy-sheep-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "fluffy-sheep-v2-coloring",
+          "thumbnail": "fluffy-sheep-v2-coloring-thumb"
+        }
+      },
+      "number": 20,
+      "complexity": "simple"
+    },
+    {
+      "id": "butterfly-wide-wings",
+      "title": "Borboleta com asas grandes",
+      "category": "C",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "butterfly-wide-wings-v2-trace",
+          "thumbnail": "butterfly-wide-wings-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "butterfly-wide-wings-v2-coloring",
+          "thumbnail": "butterfly-wide-wings-v2-coloring-thumb"
+        }
+      },
+      "number": 21,
+      "complexity": "simple"
+    },
+    {
+      "id": "potted-flower",
+      "title": "Flor num vaso",
+      "category": "C",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "potted-flower-v2-trace",
+          "thumbnail": "potted-flower-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "potted-flower-v2-coloring",
+          "thumbnail": "potted-flower-v2-coloring-thumb"
+        }
+      },
+      "number": 22,
+      "complexity": "simple"
+    },
+    {
+      "id": "ladybird-leaf",
+      "title": "Joaninha numa folha",
+      "category": "C",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "ladybird-leaf-v2-trace",
+          "thumbnail": "ladybird-leaf-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "ladybird-leaf-v2-coloring",
+          "thumbnail": "ladybird-leaf-v2-coloring-thumb"
+        }
+      },
+      "number": 23,
+      "complexity": "simple"
+    },
+    {
+      "id": "bee-flower",
+      "title": "Abelhinha junto à flor",
+      "category": "C",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "bee-flower-v2-trace",
+          "thumbnail": "bee-flower-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "bee-flower-v2-coloring",
+          "thumbnail": "bee-flower-v2-coloring-thumb"
+        }
+      },
+      "number": 24,
+      "complexity": "simple"
+    },
+    {
+      "id": "snail-garden",
+      "title": "Caracol no jardim",
+      "category": "C",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "snail-garden-v2-trace",
+          "thumbnail": "snail-garden-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "snail-garden-v2-coloring",
+          "thumbnail": "snail-garden-v2-coloring-thumb"
+        }
+      },
+      "number": 25,
+      "complexity": "simple"
+    },
+    {
+      "id": "mushrooms-grass",
+      "title": "Cogumelos e capim",
+      "category": "C",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "mushrooms-grass-v2-trace",
+          "thumbnail": "mushrooms-grass-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "mushrooms-grass-v2-coloring",
+          "thumbnail": "mushrooms-grass-v2-coloring-thumb"
+        }
+      },
+      "number": 26,
+      "complexity": "simple"
+    },
+    {
+      "id": "fruit-tree",
+      "title": "Árvore com frutos",
+      "category": "C",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "fruit-tree-v2-trace",
+          "thumbnail": "fruit-tree-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "fruit-tree-v2-coloring",
+          "thumbnail": "fruit-tree-v2-coloring-thumb"
+        }
+      },
+      "number": 27,
+      "complexity": "simple"
+    },
+    {
+      "id": "watering-can",
+      "title": "Regador com flores",
+      "category": "C",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "watering-can-v2-trace",
+          "thumbnail": "watering-can-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "watering-can-v2-coloring",
+          "thumbnail": "watering-can-v2-coloring-thumb"
+        }
+      },
+      "number": 28,
+      "complexity": "simple"
+    },
+    {
+      "id": "rainbow-clouds",
+      "title": "Arco-íris com nuvens",
+      "category": "C",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "rainbow-clouds-v2-trace",
+          "thumbnail": "rainbow-clouds-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "rainbow-clouds-v2-coloring",
+          "thumbnail": "rainbow-clouds-v2-coloring-thumb"
+        }
+      },
+      "number": 29,
+      "complexity": "simple"
+    },
+    {
+      "id": "sun-garden",
+      "title": "Sol e jardim",
+      "category": "C",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "sun-garden-v2-trace",
+          "thumbnail": "sun-garden-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "sun-garden-v2-coloring",
+          "thumbnail": "sun-garden-v2-coloring-thumb"
+        }
+      },
+      "number": 30,
+      "complexity": "simple"
+    },
+    {
+      "id": "jump-rope-friends",
+      "title": "Duas crianças pulando corda",
+      "category": "D",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "jump-rope-friends-v2-trace",
+          "thumbnail": "jump-rope-friends-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "jump-rope-friends-v2-coloring",
+          "thumbnail": "jump-rope-friends-v2-coloring-thumb"
+        }
+      },
+      "number": 31,
+      "complexity": "scene"
+    },
+    {
+      "id": "child-rabbit",
+      "title": "Criança com coelho de pelúcia",
+      "category": "D",
+      "complexity": "intermediate",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "child-rabbit-v2-trace",
+          "thumbnail": "child-rabbit-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "child-rabbit-v2-coloring",
+          "thumbnail": "child-rabbit-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "approved",
+      "number": 32
+    },
+    {
+      "id": "kite-friends",
+      "title": "Amigos soltando pipa",
+      "category": "D",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "kite-friends-v2-trace",
+          "thumbnail": "kite-friends-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "kite-friends-v2-coloring",
+          "thumbnail": "kite-friends-v2-coloring-thumb"
+        }
+      },
+      "number": 33,
+      "complexity": "scene"
+    },
+    {
+      "id": "ball-friends",
+      "title": "Amigos brincando de bola",
+      "category": "D",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "ball-friends-v2-trace",
+          "thumbnail": "ball-friends-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "ball-friends-v2-coloring",
+          "thumbnail": "ball-friends-v2-coloring-thumb"
+        }
+      },
+      "number": 34,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "park-picnic",
+      "title": "Piquenique no parque",
+      "category": "D",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "park-picnic-v2-trace",
+          "thumbnail": "park-picnic-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "park-picnic-v2-coloring",
+          "thumbnail": "park-picnic-v2-coloring-thumb"
+        }
+      },
+      "number": 35,
+      "complexity": "scene"
+    },
+    {
+      "id": "soap-bubbles-child",
+      "title": "Criança com bolhas de sabão",
+      "category": "D",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "soap-bubbles-child-v2-trace",
+          "thumbnail": "soap-bubbles-child-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "soap-bubbles-child-v2-coloring",
+          "thumbnail": "soap-bubbles-child-v2-coloring-thumb"
+        }
+      },
+      "number": 36,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "child-drawing-table",
+      "title": "Criança desenhando numa mesa",
+      "category": "D",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "child-drawing-table-v2-trace",
+          "thumbnail": "child-drawing-table-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "child-drawing-table-v2-coloring",
+          "thumbnail": "child-drawing-table-v2-coloring-thumb"
+        }
+      },
+      "number": 37,
+      "complexity": "scene"
+    },
+    {
+      "id": "hide-seek-friends",
+      "title": "Brincadeira de esconde-esconde",
+      "category": "D",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "hide-seek-friends-v2-trace",
+          "thumbnail": "hide-seek-friends-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "hide-seek-friends-v2-coloring",
+          "thumbnail": "hide-seek-friends-v2-coloring-thumb"
+        }
+      },
+      "number": 38,
+      "complexity": "scene"
+    },
+    {
+      "id": "building-blocks-friends",
+      "title": "Amigos montando blocos",
+      "category": "D",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "building-blocks-friends-v2-trace",
+          "thumbnail": "building-blocks-friends-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "building-blocks-friends-v2-coloring",
+          "thumbnail": "building-blocks-friends-v2-coloring-thumb"
+        }
+      },
+      "number": 39,
+      "complexity": "scene"
+    },
+    {
+      "id": "small-birthday-party",
+      "title": "Festa de aniversário pequena",
+      "category": "D",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "small-birthday-party-v2-trace",
+          "thumbnail": "small-birthday-party-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "small-birthday-party-v2-coloring",
+          "thumbnail": "small-birthday-party-v2-coloring-thumb"
+        }
+      },
+      "number": 40,
+      "complexity": "scene"
+    },
+    {
+      "id": "dollhouse",
+      "title": "Casinha de boneca aberta",
+      "category": "E",
+      "complexity": "scene",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "dollhouse-v2-trace",
+          "thumbnail": "dollhouse-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "dollhouse-v2-coloring",
+          "thumbnail": "dollhouse-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "approved",
+      "number": 41
+    },
+    {
+      "id": "bedroom-toys",
+      "title": "Quartinho com cama e brinquedos",
+      "category": "E",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "bedroom-toys-v2-trace",
+          "thumbnail": "bedroom-toys-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "bedroom-toys-v2-coloring",
+          "thumbnail": "bedroom-toys-v2-coloring-thumb"
+        }
+      },
+      "number": 42,
+      "complexity": "scene"
+    },
+    {
+      "id": "toy-kitchen",
+      "title": "Cozinha de brinquedo",
+      "category": "E",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "toy-kitchen-v2-trace",
+          "thumbnail": "toy-kitchen-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "toy-kitchen-v2-coloring",
+          "thumbnail": "toy-kitchen-v2-coloring-thumb"
+        }
+      },
+      "number": 43,
+      "complexity": "scene"
+    },
+    {
+      "id": "small-castle",
+      "title": "Castelo pequeno",
+      "category": "E",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "small-castle-v2-trace",
+          "thumbnail": "small-castle-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "small-castle-v2-coloring",
+          "thumbnail": "small-castle-v2-coloring-thumb"
+        }
+      },
+      "number": 44,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "fairy-garden",
+      "title": "Jardim de uma fadinha original",
+      "category": "E",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "fairy-garden-v2-trace",
+          "thumbnail": "fairy-garden-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "fairy-garden-v2-coloring",
+          "thumbnail": "fairy-garden-v2-coloring-thumb"
+        }
+      },
+      "number": 45,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "flower-carriage",
+      "title": "Carruagem de flores",
+      "category": "E",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "flower-carriage-v2-trace",
+          "thumbnail": "flower-carriage-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "flower-carriage-v2-coloring",
+          "thumbnail": "flower-carriage-v2-coloring-thumb"
+        }
+      },
+      "number": 46,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "suitcase-world",
+      "title": "Maletinha com um pequeno mundo",
+      "category": "E",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "suitcase-world-v2-trace",
+          "thumbnail": "suitcase-world-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "suitcase-world-v2-coloring",
+          "thumbnail": "suitcase-world-v2-coloring-thumb"
+        }
+      },
+      "number": 47,
+      "complexity": "scene"
+    },
+    {
+      "id": "toy-shop",
+      "title": "Lojinha de brinquedos",
+      "category": "E",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "toy-shop-v2-trace",
+          "thumbnail": "toy-shop-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "toy-shop-v2-coloring",
+          "thumbnail": "toy-shop-v2-coloring-thumb"
+        }
+      },
+      "number": 48,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "mini-amusement-park",
+      "title": "Parque de diversões em miniatura",
+      "category": "E",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "mini-amusement-park-v2-trace",
+          "thumbnail": "mini-amusement-park-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "mini-amusement-park-v2-coloring",
+          "thumbnail": "mini-amusement-park-v2-coloring-thumb"
+        }
+      },
+      "number": 49,
+      "complexity": "scene"
+    },
+    {
+      "id": "doll-pet",
+      "title": "Boneca e seu bichinho",
+      "category": "E",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "doll-pet-v2-trace",
+          "thumbnail": "doll-pet-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "doll-pet-v2-coloring",
+          "thumbnail": "doll-pet-v2-coloring-thumb"
+        }
+      },
+      "number": 50,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "air-adventure",
+      "title": "Aventureira com redemoinho de ar",
+      "category": "F",
+      "complexity": "intermediate",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "air-adventure-v2-trace",
+          "thumbnail": "air-adventure-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "air-adventure-v2-coloring",
+          "thumbnail": "air-adventure-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "approved",
+      "number": 51
+    },
+    {
+      "id": "water-adventure",
+      "title": "Criança aventureira com uma onda de água",
+      "category": "F",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "water-adventure-v2-trace",
+          "thumbnail": "water-adventure-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "water-adventure-v2-coloring",
+          "thumbnail": "water-adventure-v2-coloring-thumb"
+        }
+      },
+      "number": 52,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "earth-adventure",
+      "title": "Criança aventureira com pedras flutuantes",
+      "category": "F",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "earth-adventure-v2-trace",
+          "thumbnail": "earth-adventure-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "earth-adventure-v2-coloring",
+          "thumbnail": "earth-adventure-v2-coloring-thumb"
+        }
+      },
+      "number": 53,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "fire-adventure",
+      "title": "Criança aventureira com pequena chama fantástica",
+      "category": "F",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "fire-adventure-v2-trace",
+          "thumbnail": "fire-adventure-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "fire-adventure-v2-coloring",
+          "thumbnail": "fire-adventure-v2-coloring-thumb"
+        }
+      },
+      "number": 54,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "cloud-temple",
+      "title": "Templo nas nuvens",
+      "category": "F",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cloud-temple-v2-trace",
+          "thumbnail": "cloud-temple-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cloud-temple-v2-coloring",
+          "thumbnail": "cloud-temple-v2-coloring-thumb"
+        }
+      },
+      "number": 55,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "quiet-lake-boat",
+      "title": "Barquinho num lago tranquilo",
+      "category": "F",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "quiet-lake-boat-v2-trace",
+          "thumbnail": "quiet-lake-boat-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "quiet-lake-boat-v2-coloring",
+          "thumbnail": "quiet-lake-boat-v2-coloring-thumb"
+        }
+      },
+      "number": 56,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "mountain-bridge",
+      "title": "Ponte entre montanhas",
+      "category": "F",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "mountain-bridge-v2-trace",
+          "thumbnail": "mountain-bridge-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "mountain-bridge-v2-coloring",
+          "thumbnail": "mountain-bridge-v2-coloring-thumb"
+        }
+      },
+      "number": 57,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "round-flying-creature",
+      "title": "Criatura voadora original de formas arredondadas",
+      "category": "F",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "round-flying-creature-v2-trace",
+          "thumbnail": "round-flying-creature-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "round-flying-creature-v2-coloring",
+          "thumbnail": "round-flying-creature-v2-coloring-thumb"
+        }
+      },
+      "number": 58,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "elements-symbol-garden",
+      "title": "Jardim com símbolos dos quatro elementos",
+      "category": "F",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "elements-symbol-garden-v2-trace",
+          "thumbnail": "elements-symbol-garden-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "elements-symbol-garden-v2-coloring",
+          "thumbnail": "elements-symbol-garden-v2-coloring-thumb"
+        }
+      },
+      "number": 59,
+      "complexity": "scene"
+    },
+    {
+      "id": "little-adventurers",
+      "title": "Grupo de pequenos aventureiros",
+      "category": "F",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "little-adventurers-v2-trace",
+          "thumbnail": "little-adventurers-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "little-adventurers-v2-coloring",
+          "thumbnail": "little-adventurers-v2-coloring-thumb"
+        }
+      },
+      "number": 60,
+      "complexity": "scene"
+    },
+    {
+      "id": "bear-hot-chocolate",
+      "title": "Ursinho tomando chocolate",
+      "category": "G",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "bear-hot-chocolate-v2-trace",
+          "thumbnail": "bear-hot-chocolate-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "bear-hot-chocolate-v2-coloring",
+          "thumbnail": "bear-hot-chocolate-v2-coloring-thumb"
+        }
+      },
+      "number": 61,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "rabbit-biscuits",
+      "title": "Coelhinho preparando biscoitos",
+      "category": "G",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "rabbit-biscuits-v2-trace",
+          "thumbnail": "rabbit-biscuits-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "rabbit-biscuits-v2-coloring",
+          "thumbnail": "rabbit-biscuits-v2-coloring-thumb"
+        }
+      },
+      "number": 62,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "cat-reading",
+      "title": "Gatinho lendo no sofá",
+      "category": "G",
+      "complexity": "intermediate",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "cat-reading-v2-trace",
+          "thumbnail": "cat-reading-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-reading-v2-coloring",
+          "thumbnail": "cat-reading-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "approved",
+      "number": 63
+    },
+    {
+      "id": "animals-cabin",
+      "title": "Bichinhos numa cabana",
+      "category": "G",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "animals-cabin-v2-trace",
+          "thumbnail": "animals-cabin-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "animals-cabin-v2-coloring",
+          "thumbnail": "animals-cabin-v2-coloring-thumb"
+        }
+      },
+      "number": 64,
+      "complexity": "scene"
+    },
+    {
+      "id": "duck-bubble-bath",
+      "title": "Banho de espuma de um patinho",
+      "category": "G",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "duck-bubble-bath-v2-trace",
+          "thumbnail": "duck-bubble-bath-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "duck-bubble-bath-v2-coloring",
+          "thumbnail": "duck-bubble-bath-v2-coloring-thumb"
+        }
+      },
+      "number": 65,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "fox-plants",
+      "title": "Raposinha cuidando de plantas",
+      "category": "G",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "fox-plants-v2-trace",
+          "thumbnail": "fox-plants-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "fox-plants-v2-coloring",
+          "thumbnail": "fox-plants-v2-coloring-thumb"
+        }
+      },
+      "number": 66,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "bear-bookshop",
+      "title": "Ursinho numa livraria",
+      "category": "G",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "bear-bookshop-v2-trace",
+          "thumbnail": "bear-bookshop-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "bear-bookshop-v2-coloring",
+          "thumbnail": "bear-bookshop-v2-coloring-thumb"
+        }
+      },
+      "number": 67,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "rabbit-fruit-stall",
+      "title": "Coelhinho numa barraca de frutas",
+      "category": "G",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "rabbit-fruit-stall-v2-trace",
+          "thumbnail": "rabbit-fruit-stall-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "rabbit-fruit-stall-v2-coloring",
+          "thumbnail": "rabbit-fruit-stall-v2-coloring-thumb"
+        }
+      },
+      "number": 68,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "animal-pajama-party",
+      "title": "Bichinhos numa festa do pijama",
+      "category": "G",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "animal-pajama-party-v2-trace",
+          "thumbnail": "animal-pajama-party-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "animal-pajama-party-v2-coloring",
+          "thumbnail": "animal-pajama-party-v2-coloring-thumb"
+        }
+      },
+      "number": 69,
+      "complexity": "scene"
+    },
+    {
+      "id": "cat-rain-window",
+      "title": "Gatinho olhando a chuva pela janela",
+      "category": "G",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cat-rain-window-v2-trace",
+          "thumbnail": "cat-rain-window-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-rain-window-v2-coloring",
+          "thumbnail": "cat-rain-window-v2-coloring-thumb"
+        }
+      },
+      "number": 70,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "smiling-car",
+      "title": "Carrinho sorridente",
+      "category": "H",
+      "complexity": "simple",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "smiling-car-v2-trace",
+          "thumbnail": "smiling-car-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "smiling-car-v2-coloring",
+          "thumbnail": "smiling-car-v2-coloring-thumb"
+        }
+      },
+      "reviewStatus": "approved",
+      "number": 71
+    },
+    {
+      "id": "train-two-wagons",
+      "title": "Trem com dois vagões",
+      "category": "H",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "train-two-wagons-v2-trace",
+          "thumbnail": "train-two-wagons-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "train-two-wagons-v2-coloring",
+          "thumbnail": "train-two-wagons-v2-coloring-thumb"
+        }
+      },
+      "number": 72,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "school-bus",
+      "title": "Ônibus escolar simples",
+      "category": "H",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "school-bus-v2-trace",
+          "thumbnail": "school-bus-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "school-bus-v2-coloring",
+          "thumbnail": "school-bus-v2-coloring-thumb"
+        }
+      },
+      "number": 73,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "bicycle-basket",
+      "title": "Bicicleta com cestinha",
+      "category": "H",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "bicycle-basket-v2-trace",
+          "thumbnail": "bicycle-basket-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "bicycle-basket-v2-coloring",
+          "thumbnail": "bicycle-basket-v2-coloring-thumb"
+        }
+      },
+      "number": 74,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "hot-air-balloon",
+      "title": "Balão de ar quente",
+      "category": "H",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "hot-air-balloon-v2-trace",
+          "thumbnail": "hot-air-balloon-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "hot-air-balloon-v2-coloring",
+          "thumbnail": "hot-air-balloon-v2-coloring-thumb"
+        }
+      },
+      "number": 75,
+      "complexity": "simple"
+    },
+    {
+      "id": "rocket-stars",
+      "title": "Foguete com estrelas",
+      "category": "H",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "rocket-stars-v2-trace",
+          "thumbnail": "rocket-stars-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "rocket-stars-v2-coloring",
+          "thumbnail": "rocket-stars-v2-coloring-thumb"
+        }
+      },
+      "number": 76,
+      "complexity": "simple"
+    },
+    {
+      "id": "sailboat",
+      "title": "Barco à vela",
+      "category": "H",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "sailboat-v2-trace",
+          "thumbnail": "sailboat-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "sailboat-v2-coloring",
+          "thumbnail": "sailboat-v2-coloring-thumb"
+        }
+      },
+      "number": 77,
+      "complexity": "simple"
+    },
+    {
+      "id": "tractor-field",
+      "title": "Trator no campo",
+      "category": "H",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "tractor-field-v2-trace",
+          "thumbnail": "tractor-field-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "tractor-field-v2-coloring",
+          "thumbnail": "tractor-field-v2-coloring-thumb"
+        }
+      },
+      "number": 78,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "rounded-airplane",
+      "title": "Avião de formas arredondadas",
+      "category": "H",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "rounded-airplane-v2-trace",
+          "thumbnail": "rounded-airplane-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "rounded-airplane-v2-coloring",
+          "thumbnail": "rounded-airplane-v2-coloring-thumb"
+        }
+      },
+      "number": 79,
+      "complexity": "simple"
+    },
+    {
+      "id": "ice-cream-truck",
+      "title": "Caminhão de sorvete",
+      "category": "H",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "ice-cream-truck-v2-trace",
+          "thumbnail": "ice-cream-truck-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "ice-cream-truck-v2-coloring",
+          "thumbnail": "ice-cream-truck-v2-coloring-thumb"
+        }
+      },
+      "number": 80,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "sea-turtle",
+      "title": "Tartaruga marinha",
+      "category": "I",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "sea-turtle-v2-trace",
+          "thumbnail": "sea-turtle-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "sea-turtle-v2-coloring",
+          "thumbnail": "sea-turtle-v2-coloring-thumb"
+        }
+      },
+      "number": 81,
+      "complexity": "simple"
+    },
+    {
+      "id": "jumping-dolphin",
+      "title": "Golfinho saltando",
+      "category": "I",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "jumping-dolphin-v2-trace",
+          "thumbnail": "jumping-dolphin-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "jumping-dolphin-v2-coloring",
+          "thumbnail": "jumping-dolphin-v2-coloring-thumb"
+        }
+      },
+      "number": 82,
+      "complexity": "simple"
+    },
+    {
+      "id": "fish-bubbles",
+      "title": "Peixinho com bolhas",
+      "category": "I",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "fish-bubbles-v2-trace",
+          "thumbnail": "fish-bubbles-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "fish-bubbles-v2-coloring",
+          "thumbnail": "fish-bubbles-v2-coloring-thumb"
+        }
+      },
+      "number": 83,
+      "complexity": "simple"
+    },
+    {
+      "id": "friendly-octopus",
+      "title": "Polvinho simpático",
+      "category": "I",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "friendly-octopus-v2-trace",
+          "thumbnail": "friendly-octopus-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "friendly-octopus-v2-coloring",
+          "thumbnail": "friendly-octopus-v2-coloring-thumb"
+        }
+      },
+      "number": 84,
+      "complexity": "simple"
+    },
+    {
+      "id": "seahorse",
+      "title": "Cavalo-marinho",
+      "category": "I",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "seahorse-v2-trace",
+          "thumbnail": "seahorse-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "seahorse-v2-coloring",
+          "thumbnail": "seahorse-v2-coloring-thumb"
+        }
+      },
+      "number": 85,
+      "complexity": "simple"
+    },
+    {
+      "id": "mermaid-shell",
+      "title": "Sereia original com concha",
+      "category": "I",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "mermaid-shell-v2-trace",
+          "thumbnail": "mermaid-shell-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "mermaid-shell-v2-coloring",
+          "thumbnail": "mermaid-shell-v2-coloring-thumb"
+        }
+      },
+      "number": 86,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "unicorn-cloud",
+      "title": "Unicórnio com nuvem",
+      "category": "I",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "unicorn-cloud-v2-trace",
+          "thumbnail": "unicorn-cloud-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "unicorn-cloud-v2-coloring",
+          "thumbnail": "unicorn-cloud-v2-coloring-thumb"
+        }
+      },
+      "number": 87,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "friendly-dragon",
+      "title": "Dragãozinho amigável",
+      "category": "I",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "friendly-dragon-v2-trace",
+          "thumbnail": "friendly-dragon-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "friendly-dragon-v2-coloring",
+          "thumbnail": "friendly-dragon-v2-coloring-thumb"
+        }
+      },
+      "number": 88,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "dinosaur-flower",
+      "title": "Dinossauro com flor",
+      "category": "I",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "dinosaur-flower-v2-trace",
+          "thumbnail": "dinosaur-flower-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "dinosaur-flower-v2-coloring",
+          "thumbnail": "dinosaur-flower-v2-coloring-thumb"
+        }
+      },
+      "number": 89,
+      "complexity": "simple"
+    },
+    {
+      "id": "sandcastle-starfish",
+      "title": "Castelo de areia com estrela-do-mar",
+      "category": "I",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "sandcastle-starfish-v2-trace",
+          "thumbnail": "sandcastle-starfish-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "sandcastle-starfish-v2-coloring",
+          "thumbnail": "sandcastle-starfish-v2-coloring-thumb"
+        }
+      },
+      "number": 90,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "strawberry-cupcake",
+      "title": "Cupcake com morango",
+      "category": "J",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "strawberry-cupcake-v2-trace",
+          "thumbnail": "strawberry-cupcake-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "strawberry-cupcake-v2-coloring",
+          "thumbnail": "strawberry-cupcake-v2-coloring-thumb"
+        }
+      },
+      "number": 91,
+      "complexity": "simple"
+    },
+    {
+      "id": "two-scoop-icecream",
+      "title": "Sorvete de duas bolas",
+      "category": "J",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "two-scoop-icecream-v2-trace",
+          "thumbnail": "two-scoop-icecream-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "two-scoop-icecream-v2-coloring",
+          "thumbnail": "two-scoop-icecream-v2-coloring-thumb"
+        }
+      },
+      "number": 92,
+      "complexity": "simple"
+    },
+    {
+      "id": "fruit-basket",
+      "title": "Cesta de frutas",
+      "category": "J",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "fruit-basket-v2-trace",
+          "thumbnail": "fruit-basket-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "fruit-basket-v2-coloring",
+          "thumbnail": "fruit-basket-v2-coloring-thumb"
+        }
+      },
+      "number": 93,
+      "complexity": "simple"
+    },
+    {
+      "id": "birthday-cake",
+      "title": "Bolo de aniversário",
+      "category": "J",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "birthday-cake-v2-trace",
+          "thumbnail": "birthday-cake-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "birthday-cake-v2-coloring",
+          "thumbnail": "birthday-cake-v2-coloring-thumb"
+        }
+      },
+      "number": 94,
+      "complexity": "simple"
+    },
+    {
+      "id": "pizza-plate",
+      "title": "Pizza em prato redondo",
+      "category": "J",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "pizza-plate-v2-trace",
+          "thumbnail": "pizza-plate-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "pizza-plate-v2-coloring",
+          "thumbnail": "pizza-plate-v2-coloring-thumb"
+        }
+      },
+      "number": 95,
+      "complexity": "simple"
+    },
+    {
+      "id": "cup-cookies",
+      "title": "Xícara com biscoitos",
+      "category": "J",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "cup-cookies-v2-trace",
+          "thumbnail": "cup-cookies-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cup-cookies-v2-coloring",
+          "thumbnail": "cup-cookies-v2-coloring-thumb"
+        }
+      },
+      "number": 96,
+      "complexity": "simple"
+    },
+    {
+      "id": "ribbon-gift",
+      "title": "Presente com laço grande",
+      "category": "J",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "ribbon-gift-v2-trace",
+          "thumbnail": "ribbon-gift-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "ribbon-gift-v2-coloring",
+          "thumbnail": "ribbon-gift-v2-coloring-thumb"
+        }
+      },
+      "number": 97,
+      "complexity": "simple"
+    },
+    {
+      "id": "party-balloons",
+      "title": "Balões de festa",
+      "category": "J",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "party-balloons-v2-trace",
+          "thumbnail": "party-balloons-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "party-balloons-v2-coloring",
+          "thumbnail": "party-balloons-v2-coloring-thumb"
+        }
+      },
+      "number": 98,
+      "complexity": "simple"
+    },
+    {
+      "id": "crown-wand",
+      "title": "Coroa e varinha de brincadeira",
+      "category": "J",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "crown-wand-v2-trace",
+          "thumbnail": "crown-wand-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "crown-wand-v2-coloring",
+          "thumbnail": "crown-wand-v2-coloring-thumb"
+        }
+      },
+      "number": 99,
+      "complexity": "intermediate"
+    },
+    {
+      "id": "animal-snack-table",
+      "title": "Mesa de lanche dos bichinhos",
+      "category": "J",
+      "assetVersion": 2,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — curvas vetoriais originais elaboradas pelo assistente (IA)",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "reviewStatus": "awaiting-approval",
+      "variants": {
+        "trace": {
+          "asset": "animal-snack-table-v2-trace",
+          "thumbnail": "animal-snack-table-v2-trace-thumb"
+        },
+        "coloring": {
+          "asset": "animal-snack-table-v2-coloring",
+          "thumbnail": "animal-snack-table-v2-coloring-thumb"
+        }
+      },
+      "number": 100,
+      "complexity": "scene"
+    }
+  ],
+  "archivedItems": [
+    {
+      "id": "cat-seated",
+      "title": "Gatinho sentado",
+      "category": "A",
+      "complexity": "simple",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "cat-seated-v1-trace",
+          "thumbnail": "cat-seated-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-seated-v1-coloring",
+          "thumbnail": "cat-seated-v1-coloring-thumb"
+        }
+      }
+    },
+    {
+      "id": "child-rabbit",
+      "title": "Criança com coelho de pelúcia",
+      "category": "D",
+      "complexity": "intermediate",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "child-rabbit-v1-trace",
+          "thumbnail": "child-rabbit-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "child-rabbit-v1-coloring",
+          "thumbnail": "child-rabbit-v1-coloring-thumb"
+        }
+      }
+    },
+    {
+      "id": "dollhouse",
+      "title": "Casinha de boneca aberta",
+      "category": "E",
+      "complexity": "simple",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "dollhouse-v1-trace",
+          "thumbnail": "dollhouse-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "dollhouse-v1-coloring",
+          "thumbnail": "dollhouse-v1-coloring-thumb"
+        }
+      }
+    },
+    {
+      "id": "air-adventure",
+      "title": "Aventureira com redemoinho de ar",
+      "category": "F",
+      "complexity": "intermediate",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "air-adventure-v1-trace",
+          "thumbnail": "air-adventure-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "air-adventure-v1-coloring",
+          "thumbnail": "air-adventure-v1-coloring-thumb"
+        }
+      }
+    },
+    {
+      "id": "cat-reading",
+      "title": "Gatinho lendo no sofá",
+      "category": "G",
+      "complexity": "intermediate",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "cat-reading-v1-trace",
+          "thumbnail": "cat-reading-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "cat-reading-v1-coloring",
+          "thumbnail": "cat-reading-v1-coloring-thumb"
+        }
+      }
+    },
+    {
+      "id": "smiling-car",
+      "title": "Carrinho sorridente",
+      "category": "H",
+      "complexity": "simple",
+      "assetVersion": 1,
+      "aspectRatio": 1,
+      "author": "Quadro Livre — artes vetoriais originais assistidas por IA",
+      "license": "Uso, alteração e distribuição permitidos com o aplicativo; sem material de terceiros.",
+      "variants": {
+        "trace": {
+          "asset": "smiling-car-v1-trace",
+          "thumbnail": "smiling-car-v1-trace-thumb"
+        },
+        "coloring": {
+          "asset": "smiling-car-v1-coloring",
+          "thumbnail": "smiling-car-v1-coloring-thumb"
+        }
+      }
+    }
+  ]
+}

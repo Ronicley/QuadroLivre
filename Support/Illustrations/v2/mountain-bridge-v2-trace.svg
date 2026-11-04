@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540">
+<title>Ponte entre montanhas — versão 2, trace</title>
+<g fill="none" stroke="#292d32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 75 351 L 180 119 L 278 351 Z"/>
+<path d="M 283 351 L 383 147 L 474 351 Z"/>
+<path d="M 155 175 L 178 190 L 198 163 M 360 198 L 382 217 L 402 191"/>
+<path d="M 142 301 C 215 377 328 377 404 301 L 404 317 C 326 393 217 393 142 317 Z"/>
+<path d="M 140 262 C 220 339 328 339 406 262 M 140 254 L 140 325 M 406 254 L 406 325"/>
+<path d="M 188 303 L 188 340 M 241 323 L 241 364 M 294 323 L 294 364 M 351 305 L 351 342"/>
+</g></svg>
