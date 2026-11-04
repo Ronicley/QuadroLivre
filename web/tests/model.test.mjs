@@ -1,8 +1,35 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { appendStroke, emptyDocument, fitCamera, MAX_ZOOM, MIN_ZOOM, pinchCamera, redo, strokeBounds, toWorld, undo, validateDocument, zoomAt } from '../src/model.mjs';
+import { appendStroke, COLORS, INSTRUMENTS, emptyDocument, fitCamera, MAX_ZOOM, MIN_ZOOM, pinchCamera, redo, strokeBounds, toWorld, undo, validateDocument, zoomAt } from '../src/model.mjs';
 
 const stroke = (tool = 'pen') => ({ tool, color: '#6353ba', width: 10, points: [{ x: 5, y: 10, p: 0.7 }, { x: 40, y: 60, p: 1 }] });
+
+test('instrument IDs round-trip per stroke, preserve legacy data and survive history', () => {
+  assert.deepEqual(INSTRUMENTS.map(([id]) => id), ['pen', 'ballpoint', 'pencil', 'crayon']);
+  let history = { doc: emptyDocument(), redo: [] };
+  for (const tool of [...INSTRUMENTS.map(([id]) => id), 'eraser']) {
+    history = appendStroke(history, stroke(tool));
+    assert.deepEqual(redo(undo(history)), history);
+  }
+  assert.deepEqual(validateDocument(JSON.parse(JSON.stringify(history.doc))), history.doc);
+  assert.deepEqual(history.doc.strokes[0], stroke(), 'no added defaults or metadata in legacy strokes');
+  for (const tool of ['future-brush', null, 4, undefined]) {
+    const doc = { ...emptyDocument(), strokes: [stroke(tool)] };
+    if (tool === undefined) delete doc.strokes[0].tool;
+    const original = structuredClone(doc);
+    assert.throws(() => validateDocument(doc), /Instrumento desconhecido/);
+    assert.deepEqual(doc, original, 'unknown tool is never normalized or removed');
+  }
+});
+
+test('16 unique presets and arbitrary RGB colors remain valid editable stroke colors', () => {
+  assert.equal(COLORS.length, 16);
+  assert.equal(new Set(COLORS.map(([value]) => value)).size, 16);
+  for (const color of [...COLORS.map(([value]) => value), '#12abcf', '#000000']) {
+    const doc = { ...emptyDocument(), strokes: [{ ...stroke(), color }] };
+    assert.deepEqual(validateDocument(JSON.parse(JSON.stringify(doc))), doc);
+  }
+});
 
 test('document round-trip preserves editable strokes, eraser and viewport', () => {
   const doc = { ...emptyDocument(), strokes: [stroke(), stroke('eraser')], camera: { x: -30, y: 45, scale: 1.5 } };

@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 
 export default defineConfig({
   base: './',
-  build: { target: 'safari17' },
+  build: { target: 'safari17', assetsInlineLimit: 0 },
   plugins: [{
     name: 'offline-shell',
     generateBundle(_options, bundle) {

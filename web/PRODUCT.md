@@ -20,11 +20,11 @@ Validar uma alternativa instalável e offline ao aplicativo Swift, sem substitui
 
 ## Capabilities and Constraints
 
-Primeira entrega aprovada: desenho livre por caneta, zoom e movimentação com dois dedos, desfazer/refazer e salvamento local offline. Mouse permite testar no computador; dedo não desenha. Manter quadro branco e controles grandes. Catálogo completo, galeria e conversão de PKDrawing ficam para outra etapa. A primeira abertura exige conexão e HTTPS (localhost é permitido para desenvolvimento).
+Primeira entrega aprovada: desenho livre por caneta, zoom e movimentação com dois dedos, desfazer/refazer e salvamento local offline. Continuação solicitada: galeria local, vários quadros e funções restantes; responsável escolheu abrir o app na galeria e continuar com Seguir contorno, Colorir e catálogo existente. Inclui exportação composta, restauração do backup web como cópia e exclusão confirmada por responsável. Mouse permite testar no computador; dedo não desenha. Manter quadro branco e controles grandes. Conversão de PKDrawing fica fora do escopo. A primeira abertura exige conexão e HTTPS (localhost é permitido para desenvolvimento).
 
 ## Evidence on Hand
 
-`../Sources/QuadroLivre/DrawingScreen.swift` define a interface existente. `../Support/AppIcon.png` é o ícone original. As ilustrações existentes não fazem parte deste protótipo.
+`../Sources/QuadroLivre/DrawingScreen.swift` define a interface existente. `../Support/AppIcon.png` é o ícone original. `catalog/` contém cópias exatas das ilustrações referenciadas pelo catálogo nativo, com versões arquivadas. Coleção mantém estado de revisão: seis pares-piloto aprovados, 94 artes aguardando revisão final; funcionalidade web não constitui aprovação artística.
 
 ## Product Principles
 

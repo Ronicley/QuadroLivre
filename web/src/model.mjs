@@ -1,9 +1,18 @@
+import { resolveTemplate } from './catalog.mjs';
+
 export const COLORS = [
   ['#353345', 'Preto'], ['#6353ba', 'Roxo'], ['#1679cb', 'Azul'],
   ['#18887e', 'Verde'], ['#e23f73', 'Rosa'], ['#e15334', 'Vermelho'],
   ['#ee941e', 'Laranja'], ['#f2cb3c', 'Amarelo'],
+  ['#ffffff', 'Branco'], ['#90909c', 'Cinza'], ['#8a5135', 'Marrom'],
+  ['#f2bc92', 'Pêssego'], ['#f59bb8', 'Rosa claro'], ['#b6a1e3', 'Lilás'],
+  ['#8ad1ef', 'Azul claro'], ['#a6cf63', 'Verde claro'],
 ];
 export const WIDTHS = [4, 10, 22];
+// Keep persisted IDs stable: `pen` is the original felt-tip renderer.
+export const INSTRUMENTS = [
+  ['pen', 'Canetinha'], ['ballpoint', 'Caneta'], ['pencil', 'Lápis'], ['crayon', 'Giz de cera'],
+];
 export const MIN_ZOOM = 0.15;
 export const MAX_ZOOM = 6;
 const finite = (value, limit) => Number.isFinite(value) && Math.abs(value) <= limit;
@@ -12,22 +21,44 @@ export function emptyDocument() {
   return { version: 1, strokes: [], camera: { x: 0, y: 0, scale: 1 } };
 }
 
+export function activityDocument(mode, item) {
+  return { ...emptyDocument(), version: 2, mode,
+    template: { id: item.id, assetVersion: item.assetVersion,
+      rect: { x: -450, y: -450, width: 900, height: 900 } } };
+}
+
 // IndexedDB is a trust boundary: never silently replace a document we cannot read.
 export function validateDocument(doc) {
-  if (!doc || doc.version !== 1 || !Array.isArray(doc.strokes) || doc.strokes.length > 100_000 ||
+  if (!doc || ![1, 2].includes(doc.version) || !Array.isArray(doc.strokes) || doc.strokes.length > 100_000 ||
       !doc.camera || !finite(doc.camera.x, 10_000_000) || !finite(doc.camera.y, 10_000_000) ||
       !Number.isFinite(doc.camera.scale) || doc.camera.scale < MIN_ZOOM || doc.camera.scale > MAX_ZOOM) {
     throw new Error('Formato de quadro inválido. O original não foi substituído.');
   }
+  if (doc.version === 1 && (doc.mode !== undefined || doc.template !== undefined)) {
+    throw new Error('Metadados incompatíveis com quadro V1. O original não foi substituído.');
+  }
+  if (doc.version === 2) {
+    const rect = doc.template?.rect;
+    if (!['trace', 'coloring'].includes(doc.mode) || !Number.isSafeInteger(doc.template?.assetVersion) ||
+        !rect || !finite(rect.x, 1_000_000) || !finite(rect.y, 1_000_000) ||
+        !Number.isFinite(rect.width) || !Number.isFinite(rect.height) ||
+        rect.width <= 0 || rect.height <= 0 || rect.width > 100_000 || rect.height > 100_000) {
+      throw new Error('Modelo inválido. O original não foi substituído.');
+    }
+    resolveTemplate(doc.template, doc.mode);
+  }
   let total = 0;
   for (const stroke of doc.strokes) {
-    if (!stroke || !['pen', 'eraser'].includes(stroke.tool) || !/^#[\da-f]{6}$/i.test(stroke.color) ||
+    if (stroke && stroke.tool !== 'eraser' && !INSTRUMENTS.some(([id]) => id === stroke.tool)) {
+      throw new Error('Instrumento desconhecido. Atualize o app; o original não foi substituído.');
+    }
+    if (!stroke || !/^#[\da-f]{6}$/i.test(stroke.color) ||
         !Number.isFinite(stroke.width) || stroke.width < 1 || stroke.width > 100 ||
         !Array.isArray(stroke.points) || !stroke.points.length) {
       throw new Error('Traço inválido. O original não foi substituído.');
     }
     total += stroke.points.length;
-    if (total > 2_000_000 || stroke.points.some(point => !point ||
+    if (total > 2_000_000 || [...stroke.points].some(point => !point ||
         !finite(point.x, 1_000_000) || !finite(point.y, 1_000_000) ||
         !Number.isFinite(point.p) || point.p < 0 || point.p > 1)) {
       throw new Error('Pontos inválidos ou quadro muito grande. O original não foi substituído.');
@@ -70,7 +101,24 @@ export function strokeBounds(strokes) {
 }
 
 export function fitCamera(strokes, width, height, bottom = 130) {
-  const bounds = strokeBounds(strokes);
+  return fitBounds(strokeBounds(strokes), width, height, bottom);
+}
+
+export function documentBounds(doc) {
+  const ink = strokeBounds(doc.strokes);
+  const rect = doc.version === 2 ? doc.template.rect : null;
+  if (!rect) return ink;
+  if (!ink) return rect;
+  const x = Math.min(ink.x, rect.x), y = Math.min(ink.y, rect.y);
+  return { x, y, width: Math.max(ink.x + ink.width, rect.x + rect.width) - x,
+    height: Math.max(ink.y + ink.height, rect.y + rect.height) - y };
+}
+
+export function fitDocument(doc, width, height, bottom = 130) {
+  return fitBounds(documentBounds(doc), width, height, bottom);
+}
+
+function fitBounds(bounds, width, height, bottom) {
   if (!bounds) return { x: width / 2, y: height / 2, scale: 1 };
   const scale = Math.min(2, Math.max(MIN_ZOOM,
     Math.min((width - 64) / Math.max(bounds.width, 1), (height - 120 - bottom) / Math.max(bounds.height, 1))));

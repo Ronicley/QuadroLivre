@@ -76,7 +76,7 @@ Quadro branco e controles grandes são escolhas confirmadas. Não há metáfora 
 `teal` identifica mover, reenquadrar e estado de salvamento; `hand-selected` acompanha a mão selecionada. `eraser` e `eraser-selected` identificam borracha e sua seleção.
 ### Neutral
 `white` mantém quadro e superfícies superiores; `surface` preenche dock, paleta e campo. `ink`, `muted` e `line` distinguem texto, apoio e divisórias. Tokens de erro correspondem a salvamento, banner e formulário; mensagens também identificam o erro.
-Paleta de desenho é separada das cores dos controles: oito amostras de `src/model.mjs` (Preto, Roxo, Azul, Verde, Rosa, Vermelho, Laranja, Amarelo). Não confundir verde da tinta com `teal` da interface.
+Paleta de desenho é separada das cores dos controles: 16 amostras de `src/model.mjs` (Preto, Roxo, Azul, Verde, Rosa, Vermelho, Laranja, Amarelo, Branco, Cinza, Marrom, Pêssego, Rosa claro, Lilás, Azul claro, Verde claro) e seletor nativo de cor com rótulo “Outra cor”. Não confundir verde da tinta com `teal` da interface.
 
 ## Typography
 Toda interface herda a pilha de sistema de `typography.title`; botões e campos herdam a fonte. Não há fonte baixada ou escala proporcional declarada.
@@ -96,7 +96,8 @@ Dock, paleta, banner e modal compartilham `--elevation`, registrado no sidecar. 
 ## Components
 - **Ferramentas:** alvo padrão (56px); zoom, fechar e ações superiores compactas usam (44px). Seleção usa `aria-pressed`, fundo e contorno interno (2px); mão e borracha têm pares de cor próprios. Hover só existe em dispositivos com hover; desabilitado usa opacidade (0.32).
 - **Foco:** botões, campos e canvas usam outline de (3px) em `accent`, afastado (4px). Não há estilo `:active` próprio, exceto cursor da mão no canvas.
-- **Espessuras e paleta:** três círculos (6/12/18px) representam traços (4/10/22); botões de espessura medem (44 × 52px), largura (48px) no mobile. Paleta tem quatro colunas, amostras (48px), check e outline na seleção; amarelo e laranja usam check em `ink`.
+- **Espessuras e paleta:** três círculos (6/12/18px) representam traços (4/10/22); botões de espessura medem (44 × 52px), largura (48px) no mobile. Paleta tem quatro colunas, 16 amostras (48px), check e outline na seleção; cores claras usam check em `ink` e branco tem borda interna visível. “Outra cor” usa `input type="color"` nativo (72 × 48px). Altura da paleta é limitada à janela, com rolagem interna em telas baixas.
+- **Instrumentos:** um único botão no lugar da canetinha abre painel de (264px), com quatro opções em duas colunas e alvos de altura mínima (72px): Canetinha, Caneta, Lápis e Giz de cera. Ícone do botão e instrução do editor identificam escolha atual; seleção usa `aria-pressed`, `accent-soft` e contorno. Painel compartilha superfície, sombra e rolagem da paleta, fecha ao escolher, tocar fora ou pressionar Escape; Escape/escolha devolvem foco ao botão. Cor e espessura preservam instrumento escolhido, inclusive ao sair da mão/borracha. Dock não ganha colunas ou linhas. Traços têm aparências distintas e texturas fixas no quadro, não nos controles.
 - **Modal e ações:** campo com altura mínima (56px), ação principal (52px) e exportação (48px). Banner oferece recuperação; erro do formulário aparece junto ao campo. Modal mantém rótulo e botão de fechar acessíveis.
 - **Ícones:** SVG inline, viewBox (24 × 24), sem preenchimento, stroke (1.8), pontas e junções arredondadas; tamanho padrão (26px), variantes observadas (16/20/24px). Botões fornecem nomes acessíveis.
 

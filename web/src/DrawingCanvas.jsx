@@ -2,10 +2,10 @@ import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { appendStroke, pinchCamera, toWorld, zoomAt } from './model.mjs';
 import { createRenderer } from './render.mjs';
 
-export default function DrawingCanvas({ doc, change, tool, color, width, enabled, onInteract }) {
+export default function DrawingCanvas({ doc, template, change, tool, color, width, enabled, onInteract, finishRef }) {
   const canvasRef = useRef(null);
   const latest = useRef({});
-  latest.current = { doc, change, tool, color, width, onInteract };
+  latest.current = { doc, template, change, tool, color, width, onInteract };
   const session = useRef({ active: null, pointer: null, touches: new Map(), lastPen: -Infinity });
   const paint = useRef(() => {});
 
@@ -17,7 +17,7 @@ export default function DrawingCanvas({ doc, change, tool, color, width, enabled
       if (frame) return;
       frame = requestAnimationFrame(() => {
         frame = null;
-        if (latest.current.doc) render(latest.current.doc, session.current.active);
+        if (latest.current.doc) render(latest.current.doc, session.current.active, latest.current.template);
       });
     };
     const resize = new ResizeObserver(paint.current);
@@ -46,6 +46,7 @@ export default function DrawingCanvas({ doc, change, tool, color, width, enabled
       if (commit) latest.current.change(history => appendStroke(history, stroke), true);
       paint.current();
     };
+    finishRef.current = finish;
     const addPoint = event => {
       const position = toWorld(local(event), latest.current.doc.camera);
       const point = {
@@ -137,6 +138,7 @@ export default function DrawingCanvas({ doc, change, tool, color, width, enabled
     document.addEventListener('visibilitychange', hidden);
     return () => {
       finish();
+      finishRef.current = null;
       state.touches.clear(); state.pointer = null; state.drag = null;
       canvas.removeEventListener('pointerdown', down);
       canvas.removeEventListener('pointermove', move);
@@ -148,7 +150,7 @@ export default function DrawingCanvas({ doc, change, tool, color, width, enabled
       window.removeEventListener('pagehide', blur);
       document.removeEventListener('visibilitychange', hidden);
     };
-  }, [enabled]);
+  }, [enabled, finishRef]);
 
   return <canvas ref={canvasRef} className={`drawing-canvas tool-${tool}`} tabIndex={enabled ? 0 : -1}
     role="img" aria-label="Quadro de desenho livre. Desenhe com caneta ou mouse; use dois dedos para mover e ampliar."
