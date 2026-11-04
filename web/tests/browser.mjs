@@ -154,11 +154,18 @@ test('PWA production browser acceptance (Chromium)', { timeout: 120_000 }, async
             const { x, y, width, height } = document.querySelector(selector).getBoundingClientRect();
             return { x, y, width, height };
           };
-          return { dock: rect('.dock'), zoom: rect('.zoom-controls'), scroll: document.documentElement.scrollWidth, width: innerWidth };
+          return { dock: rect('.dock'), zoom: rect('.zoom-controls'), input: rect('.input-mode'), hint: rect('.empty-hint'),
+            targets: [...document.querySelectorAll('.input-mode button')].map(b => ({ width: b.offsetWidth, height: b.offsetHeight })),
+            scroll: document.documentElement.scrollWidth, width: innerWidth };
         });
         assert.ok(geometry.dock.x >= 0 && geometry.dock.x + geometry.dock.width <= width, `${name}: dock fits`);
         assert.ok(geometry.dock.y > 90 && geometry.dock.y + geometry.dock.height <= height, `${name}: dock remains visible`);
         assert.ok(geometry.zoom.y + geometry.zoom.height <= geometry.dock.y || geometry.zoom.x >= geometry.dock.x + geometry.dock.width, `${name}: zoom doesn't overlap dock`);
+        assert.ok(geometry.input.x >= 0 && geometry.input.x + geometry.input.width <= width && geometry.input.y >= 90, `${name}: input selector fits`);
+        assert.ok(geometry.input.y >= geometry.hint.y + geometry.hint.height, `${name}: selector doesn't overlap empty hint`);
+        assert.ok(geometry.zoom.y >= geometry.hint.y + geometry.hint.height || geometry.zoom.x >= geometry.hint.x + geometry.hint.width, `${name}: zoom doesn't cover empty hint`);
+        assert.ok(geometry.zoom.y + geometry.zoom.height <= geometry.input.y || geometry.zoom.x >= geometry.input.x + geometry.input.width, `${name}: zoom doesn't overlap input selector`);
+        assert.ok(geometry.targets.every(target => target.width >= 44 && target.height >= 44), `${name}: input targets remain accessible`);
         assert.ok(geometry.scroll <= geometry.width, `${name}: no horizontal overflow`);
         await page.screenshot({ path: resolve(screenshots, `${name}.png`), fullPage: true });
       }
@@ -331,7 +338,7 @@ test('PWA production browser acceptance (Chromium)', { timeout: 120_000 }, async
       const cdp = await isolated.newCDPSession(target);
       for (const [i, [tool, label]] of INSTRUMENTS.entries()) {
         await target.getByRole('button', { name: 'Escolher instrumento', exact: true }).click();
-        await target.getByRole('button', { name: label, exact: true }).click();
+        await target.getByRole('group', { name: 'Instrumentos de desenho', exact: true }).getByRole('button', { name: label, exact: true }).click();
         await target.getByRole('button', { name: 'Escolher cor', exact: true }).click();
         await target.getByRole('button', { name: 'Marrom', exact: true }).click();
         for (const [j, width] of ['Traço fino', 'Traço médio', 'Traço grosso'].entries()) {
@@ -465,7 +472,102 @@ test('PWA production browser acceptance (Chromium)', { timeout: 120_000 }, async
       await page.getByRole('button', { name: 'Fechar área dos responsáveis' }).click();
     });
 
-    await t.test('pen pressure, pointer cancellation, fingers never draw, pinch zoom and hand pan', async () => {
+    await t.test('finger mode draws and erases; pinch, cancellation, hand, mode switches and reload preserve ink', async () => {
+      const isolated = await browser.newContext({ viewport: { width: 1024, height: 768 }, hasTouch: true });
+      const target = await isolated.newPage();
+      const cdp = await isolated.newCDPSession(target);
+      const touch = (type, touchPoints) => cdp.send('Input.dispatchTouchEvent', { type, touchPoints });
+      const fingerStroke = async () => {
+        await touch('touchStart', [{ x: 350, y: 300, id: 1 }]);
+        await touch('touchMove', [{ x: 500, y: 350, id: 1 }]);
+        await touch('touchEnd', []);
+        await saved(target);
+      };
+      const input = target.getByRole('group', { name: 'Desenhar com', exact: true });
+      await target.goto(url);
+      await createFree(target);
+      assert.equal(await input.getByRole('button', { name: 'Caneta', exact: true }).getAttribute('aria-pressed'), 'true');
+      await input.getByRole('button', { name: 'Dedo', exact: true }).click();
+      assert.equal(await input.getByRole('button', { name: 'Dedo', exact: true }).getAttribute('aria-pressed'), 'true');
+      assert.match(await target.locator('canvas').getAttribute('aria-label'), /dedo, caneta ou mouse/);
+      await fingerStroke();
+      let board = await readBoard(target);
+      assert.equal(board.strokes.length, 1);
+      assert.equal(board.strokes[0].tool, 'pen');
+      assert.ok(board.strokes[0].points.length >= 2);
+      assert.ok(await pixelAlpha(target, 425, 325) > 0, 'finger paints visible ink');
+      await fingerStroke();
+      assert.equal((await readBoard(target)).strokes.length, 2, 'successive touch strokes have no pen guard delay');
+      await target.getByRole('button', { name: 'Borracha', exact: true }).click();
+      await fingerStroke();
+      assert.equal((await readBoard(target)).strokes.at(-1).tool, 'eraser');
+      assert.equal(await pixelAlpha(target, 425, 325), 0, 'finger eraser removes ink');
+      await target.getByRole('button', { name: 'Desfazer', exact: true }).click();
+      await saved(target);
+      assert.ok(await pixelAlpha(target, 425, 325) > 0);
+      await target.getByRole('button', { name: 'Escolher instrumento', exact: true }).click();
+      await target.getByRole('button', { name: 'Giz de cera', exact: true }).click();
+      const beforeGesture = await readBoard(target);
+      await touch('touchStart', [{ x: 400, y: 300, id: 1 }]);
+      await touch('touchMove', [{ x: 420, y: 320, id: 1 }]);
+      await touch('touchStart', [{ x: 420, y: 320, id: 1 }, { x: 620, y: 320, id: 2 }]);
+      await touch('touchMove', [{ x: 370, y: 350, id: 1 }, { x: 670, y: 350, id: 2 }]);
+      await touch('touchEnd', [{ x: 370, y: 350, id: 1 }]);
+      await touch('touchMove', [{ x: 390, y: 370, id: 1 }]);
+      await touch('touchEnd', []);
+      await saved(target);
+      board = await readBoard(target);
+      assert.deepEqual(board.strokes, beforeGesture.strokes, 'pinch discards provisional ink; remaining finger never resumes drawing');
+      assert.ok(board.camera.scale > beforeGesture.camera.scale);
+      await target.getByRole('button', { name: 'Refazer', exact: true }).click();
+      await saved(target);
+      assert.equal((await readBoard(target)).strokes.at(-1).tool, 'eraser', 'gesture preserves redo history');
+      await fingerStroke();
+      assert.equal((await readBoard(target)).strokes.at(-1).tool, 'crayon');
+      const beforeCancel = await readBoard(target);
+      await touch('touchStart', [{ x: 350, y: 300, id: 1 }]);
+      await touch('touchMove', [{ x: 500, y: 350, id: 1 }]);
+      await touch('touchCancel', []);
+      assert.deepEqual(await readBoard(target), beforeCancel, 'cancelled touch stroke is not saved');
+      await target.getByRole('button', { name: 'Mover quadro', exact: true }).click();
+      await fingerStroke();
+      board = await readBoard(target);
+      assert.deepEqual(board.strokes, beforeCancel.strokes, 'hand only pans in finger mode');
+      assert.ok(board.camera.x > beforeCancel.camera.x);
+      await target.getByRole('button', { name: 'Mover quadro', exact: true }).click();
+      await touch('touchStart', [{ x: 350, y: 300, id: 1 }]);
+      await touch('touchMove', [{ x: 500, y: 350, id: 1 }]);
+      await input.getByRole('button', { name: 'Caneta', exact: true }).focus();
+      await target.keyboard.press('Enter');
+      await saved(target);
+      await touch('touchEnd', []);
+      const switched = await readBoard(target);
+      assert.equal(switched.strokes.length, board.strokes.length + 1, 'switch finishes active stroke once');
+      await fingerStroke();
+      assert.deepEqual(await readBoard(target), switched, 'pen mode blocks finger ink');
+      await input.getByRole('button', { name: 'Dedo', exact: true }).click();
+      await gallery(target); await openBoard(target);
+      assert.equal(await input.getByRole('button', { name: 'Dedo', exact: true }).getAttribute('aria-pressed'), 'true', 'mode stays selected during session');
+      await target.reload(); await openBoard(target);
+      assert.deepEqual(await readBoard(target), switched, 'reload preserves drawing and camera');
+      assert.equal(await input.getByRole('button', { name: 'Caneta', exact: true }).getAttribute('aria-pressed'), 'true', 'new session defaults to pen for palm safety');
+      await input.getByRole('button', { name: 'Dedo', exact: true }).click();
+      await touch('touchStart', [{ x: 350, y: 300, id: 1 }]);
+      await cdp.send('Input.dispatchMouseEvent', { type: 'mousePressed', x: 400, y: 400, button: 'left', buttons: 1, pointerType: 'pen', force: 0.3, clickCount: 1 });
+      await touch('touchMove', [{ x: 500, y: 350, id: 1 }]);
+      await cdp.send('Input.dispatchMouseEvent', { type: 'mouseMoved', x: 600, y: 400, button: 'left', buttons: 1, pointerType: 'pen', force: 0.9 });
+      await cdp.send('Input.dispatchMouseEvent', { type: 'mouseReleased', x: 600, y: 400, button: 'left', buttons: 0, pointerType: 'pen', clickCount: 1 });
+      await touch('touchEnd', []);
+      await saved(target);
+      const pen = await readBoard(target);
+      assert.equal(pen.strokes.length, switched.strokes.length + 1, 'pen takes priority over provisional touch ink');
+      assert.ok(pen.strokes.at(-1).points.some(point => Math.abs(point.p - 0.9) < 0.01));
+      await fingerStroke();
+      assert.deepEqual(await readBoard(target), pen, 'post-pen palm guard also applies in finger mode');
+      await isolated.close();
+    });
+
+    await t.test('pen pressure, pointer cancellation, pen mode blocks finger ink, pinch zoom and hand pan', async () => {
       const cdp = await context.newCDPSession(page);
       const before = (await readBoard(page)).strokes.length;
       await cdp.send('Input.dispatchMouseEvent', { type: 'mousePressed', x: 400, y: 450, button: 'left', buttons: 1, pointerType: 'pen', force: 0.3, clickCount: 1 });
@@ -976,7 +1078,7 @@ test('PWA production browser acceptance (Chromium)', { timeout: 120_000 }, async
         await target.getByRole('button', { name: 'Traço grosso', exact: true }).click();
         for (const [i, [tool, label]] of INSTRUMENTS.entries()) {
           await target.getByRole('button', { name: 'Escolher instrumento', exact: true }).click();
-          await target.getByRole('button', { name: label, exact: true }).click();
+          await target.getByRole('group', { name: 'Instrumentos de desenho', exact: true }).getByRole('button', { name: label, exact: true }).click();
           const y = 354 + i * 20;
           await target.mouse.move(287, y); await target.mouse.down(); await target.mouse.move(737, y, { steps: 10 }); await target.mouse.up(); await saved(target);
           assert.equal((await readBoard(target)).strokes.at(-1).tool, tool);

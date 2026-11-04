@@ -94,7 +94,7 @@ test('bounds include brush width and ignore eraser-only extent', () => {
 });
 
 test('fit keeps strokes between top controls and dock on tablet and phone', () => {
-  for (const [width, height, bottom] of [[1024, 768, 130], [390, 844, 200]]) {
+  for (const [width, height, bottom] of [[1024, 768, 220], [390, 844, 260], [320, 568, 260], [844, 390, 180]]) {
     const strokes = [{ ...stroke(), points: [{ x: -500, y: -300, p: 1 }, { x: 500, y: 300, p: 1 }] }];
     const camera = fitCamera(strokes, width, height, bottom);
     const bounds = strokeBounds(strokes);

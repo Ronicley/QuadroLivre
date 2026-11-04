@@ -2,11 +2,11 @@ import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { appendStroke, pinchCamera, toWorld, zoomAt } from './model.mjs';
 import { createRenderer } from './render.mjs';
 
-export default function DrawingCanvas({ doc, template, change, tool, color, width, enabled, onInteract, finishRef }) {
+export default function DrawingCanvas({ doc, template, change, tool, color, width, inputMode, enabled, onInteract, finishRef }) {
   const canvasRef = useRef(null);
   const latest = useRef({});
   latest.current = { doc, template, change, tool, color, width, onInteract };
-  const session = useRef({ active: null, pointer: null, touches: new Map(), lastPen: -Infinity });
+  const session = useRef({ active: null, pointer: null, pointerType: null, touches: new Map(), lastPen: -Infinity });
   const paint = useRef(() => {});
 
   useEffect(() => {
@@ -42,7 +42,8 @@ export default function DrawingCanvas({ doc, template, change, tool, color, widt
       const stroke = state.active;
       state.active = null;
       state.pointer = null;
-      state.lastPen = performance.now();
+      if (state.pointerType === 'pen') state.lastPen = performance.now();
+      state.pointerType = null;
       if (commit) latest.current.change(history => appendStroke(history, stroke), true);
       paint.current();
     };
@@ -64,15 +65,23 @@ export default function DrawingCanvas({ doc, template, change, tool, color, widt
       latest.current.onInteract();
       event.preventDefault();
       if (event.pointerType === 'touch') {
-        if (state.active || performance.now() - state.lastPen < 700) return;
+        if ((state.active && state.pointerType !== 'touch') || performance.now() - state.lastPen < 700) return;
         state.touches.set(event.pointerId, local(event));
         canvas.setPointerCapture(event.pointerId);
-        return;
+        if (state.touches.size > 1) {
+          // A second finger turns the provisional touch stroke into a gesture, without saving ink.
+          finish(false);
+          return;
+        }
+        if (inputMode !== 'touch' || latest.current.tool === 'hand') return;
+      } else {
+        if (event.pointerType === 'pen' && state.pointerType === 'touch') finish(false);
+        if (state.pointer !== null) return;
+        state.touches.clear();
       }
-      if (state.pointer !== null) return;
-      state.touches.clear();
       canvas.setPointerCapture(event.pointerId);
       state.pointer = event.pointerId;
+      state.pointerType = event.pointerType;
       if (latest.current.tool === 'hand') {
         state.drag = local(event);
         return;
@@ -91,15 +100,17 @@ export default function DrawingCanvas({ doc, template, change, tool, color, widt
         const previous = state.touches.get(event.pointerId);
         const point = local(event);
         state.touches.set(event.pointerId, point);
-        if (state.active || performance.now() - state.lastPen < 700) return;
-        if (state.touches.size === 2) {
-          const after = [...state.touches.values()];
-          camera(value => pinchCamera(value, before, after));
+        if (event.pointerId !== state.pointer) {
+          if (state.active || performance.now() - state.lastPen < 700) return;
+          if (state.touches.size === 2) {
+            const after = [...state.touches.values()];
+            camera(value => pinchCamera(value, before, after));
+          }
+          else if (state.touches.size === 1 && latest.current.tool === 'hand') {
+            camera(value => ({ ...value, x: value.x + point.x - previous.x, y: value.y + point.y - previous.y }));
+          }
+          return;
         }
-        else if (state.touches.size === 1 && latest.current.tool === 'hand') {
-          camera(value => ({ ...value, x: value.x + point.x - previous.x, y: value.y + point.y - previous.y }));
-        }
-        return;
       }
       if (event.pointerId !== state.pointer) return;
       if (state.active) {
@@ -119,6 +130,7 @@ export default function DrawingCanvas({ doc, template, change, tool, color, widt
       if (event.type === 'pointerup' && state.active) addPoint(event);
       finish(event.type === 'pointerup');
       state.pointer = null;
+      state.pointerType = null;
       state.drag = null;
     };
     const wheel = event => {
@@ -150,10 +162,10 @@ export default function DrawingCanvas({ doc, template, change, tool, color, widt
       window.removeEventListener('pagehide', blur);
       document.removeEventListener('visibilitychange', hidden);
     };
-  }, [enabled, finishRef]);
+  }, [enabled, finishRef, inputMode]);
 
   return <canvas ref={canvasRef} className={`drawing-canvas tool-${tool}`} tabIndex={enabled ? 0 : -1}
-    role="img" aria-label="Quadro de desenho livre. Desenhe com caneta ou mouse; use dois dedos para mover e ampliar."
+    role="img" aria-label={`Quadro de desenho livre. Desenhe com ${inputMode === 'touch' ? 'dedo, caneta ou mouse' : 'caneta ou mouse'}; use dois dedos para mover e ampliar.`}
     onKeyDown={event => {
       if (!enabled) return;
       const shifts = { ArrowLeft: [40, 0], ArrowRight: [-40, 0], ArrowUp: [0, 40], ArrowDown: [0, -40] };

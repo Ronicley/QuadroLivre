@@ -20,7 +20,7 @@ Validar uma alternativa instalável e offline ao aplicativo Swift, sem substitui
 
 ## Capabilities and Constraints
 
-Primeira entrega aprovada: desenho livre por caneta, zoom e movimentação com dois dedos, desfazer/refazer e salvamento local offline. Continuação solicitada: galeria local, vários quadros e funções restantes; responsável escolheu abrir o app na galeria e continuar com Seguir contorno, Colorir e catálogo existente. Inclui exportação composta, restauração do backup web como cópia e exclusão confirmada por responsável. Mouse permite testar no computador; dedo não desenha. Manter quadro branco e controles grandes. Conversão de PKDrawing fica fora do escopo. A primeira abertura exige conexão e HTTPS (localhost é permitido para desenvolvimento).
+Primeira entrega aprovada: desenho livre por caneta, zoom e movimentação com dois dedos, desfazer/refazer e salvamento local offline. Continuação solicitada: galeria local, vários quadros e funções restantes; responsável escolheu abrir o app na galeria e continuar com Seguir contorno, Colorir e catálogo existente. Inclui exportação composta, restauração do backup web como cópia e exclusão confirmada por responsável. Mouse permite testar no computador; seletor Dedo/Caneta habilita desenho por toque ou preserva entrada somente por caneta/mouse. Caneta é o padrão de cada sessão; dois dedos movem/ampliam nos dois modos. Modo Dedo não garante rejeição de palma. Manter quadro branco e controles grandes. Conversão de PKDrawing fica fora do escopo. A primeira abertura exige conexão e HTTPS (localhost é permitido para desenvolvimento).
 
 ## Evidence on Hand
 

@@ -33,6 +33,7 @@ export default function App() {
   const [creating, setCreating] = useState(false);
   const [tool, setTool] = useState('pen');
   const [instrument, setInstrument] = useState('pen');
+  const [inputMode, setInputMode] = useState('pen');
   const [instrumentsOpen, setInstrumentsOpen] = useState(false);
   const [color, setColor] = useState(COLORS[1][0]);
   const [width, setWidth] = useState(WIDTHS[1]);
@@ -114,7 +115,7 @@ export default function App() {
   }, [parents]);
 
   const fit = () => change(value => ({ ...value, doc: { ...value.doc,
-    camera: fitDocument(value.doc, innerWidth, innerHeight, innerWidth < 600 ? 200 : 130) } }));
+    camera: fitDocument(value.doc, innerWidth, innerHeight, innerWidth < 600 ? 260 : innerHeight <= 500 ? 180 : 220) } }));
   const zoom = factor => change(value => ({ ...value, doc: { ...value.doc,
     camera: zoomAt(value.doc.camera, { x: innerWidth / 2, y: innerHeight / 2 }, factor) } }));
   const openParents = () => {
@@ -130,7 +131,7 @@ export default function App() {
     void showGallery();
   };
   const createBoard = async candidate => {
-    const doc = candidate ? { ...candidate, camera: fitDocument(candidate, innerWidth, innerHeight, innerWidth < 600 ? 200 : 130) } : null;
+    const doc = candidate ? { ...candidate, camera: fitDocument(candidate, innerWidth, innerHeight, innerWidth < 600 ? 260 : innerHeight <= 500 ? 180 : 220) } : null;
     if (await newBoard(doc)) { setCreating(false); setTool(instrument); }
   };
   const exportFile = async format => {
@@ -164,7 +165,7 @@ export default function App() {
 
   return <main className={`workspace${gallery ? ' gallery-workspace' : ''}`}>
     {!gallery && <DrawingCanvas key={boardId} doc={doc} template={template} change={change} tool={tool} color={color} width={width}
-      enabled={enabled && !parents} finishRef={finishStroke} onInteract={() => { setPalette(false); setInstrumentsOpen(false); }} />}
+      inputMode={inputMode} enabled={enabled && !parents} finishRef={finishStroke} onInteract={() => { setPalette(false); setInstrumentsOpen(false); }} />}
 
     {gallery && (creating ? <NewBoard busy={busy} onCreate={createBoard} onCancel={() => setCreating(false)} />
       : <Gallery boards={boards} ready={!['loading', 'blocked'].includes(status)} busy={busy}
@@ -197,7 +198,7 @@ export default function App() {
     {enabled && doc.version === 1 && !doc.strokes.length && <div className="empty-hint" aria-hidden="true">
       <span className="hint-line" />
       <h2>Solte a imaginação.</h2>
-      <p>Caneta para desenhar.<br />Dois dedos para mover e ampliar.</p>
+      <p>{inputMode === 'touch' ? 'Dedo para desenhar.' : 'Caneta para desenhar.'}<br />Dois dedos para mover e ampliar.</p>
       <span className="desktop-hint">No computador, use o mouse.</span>
     </div>}
 
@@ -208,8 +209,15 @@ export default function App() {
     </div>
 
     <div className="bottom-area">
+      <div className="input-mode" role="group" aria-label="Desenhar com">
+        {[['touch', 'Dedo'], ['pen', 'Caneta']].map(([value, label]) => <button key={value} type="button"
+          aria-pressed={inputMode === value} disabled={!enabled} onClick={() => {
+            finishStroke.current?.(); setInputMode(value); setPalette(false); setInstrumentsOpen(false);
+          }}>{label}</button>)}
+      </div>
       <p className="input-hint">{tool === 'hand' ? 'Modo mover · arraste para explorar' : tool === 'eraser'
-        ? 'Borracha · apague com a caneta' : `${INSTRUMENTS.find(([id]) => id === instrument)[1]} · dedos movimentam`}</p>
+        ? `Borracha · apague com ${inputMode === 'touch' ? 'o dedo' : 'a caneta'}`
+        : `${INSTRUMENTS.find(([id]) => id === instrument)[1]} · ${inputMode === 'touch' ? 'dois dedos movimentam' : 'dedos movimentam'}`}</p>
       <div className="dock" role="toolbar" aria-label="Ferramentas de desenho">
         <div className="palette-anchor" ref={paletteRef}>
           <Tool label="Escolher cor" disabled={!enabled} aria-expanded={palette} aria-controls="palette"

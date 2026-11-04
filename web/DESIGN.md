@@ -84,7 +84,7 @@ Título usa `title`; vazio usa `headline`; parágrafos do modal usam `body`; ins
 
 ## Layout
 Canvas absoluto ocupa (100% × 100dvh), sem rolagem do corpo. Topo distribui identidade à esquerda e ações à direita; margens incorporam `env(safe-area-inset-*)`. Dock e mensagens ficam centralizados embaixo; zoom fica à direita.
-Até (1050px), zoom sobe para (152px) da base. Até (700px), topo compacta e salvamento passa abaixo. Até (599px), dock vira grade de cinco colunas, largura (310px), ferramentas (52px), espessuras ocupando três colunas; zoom sobe para (198px). Até (350px), dock mede (286px) e subtítulo desaparece.
+Até (1050px), zoom sobe para (152px) da base. Até (700px), topo compacta e salvamento passa abaixo. Até (599px), dock vira grade de cinco colunas, largura (310px), ferramentas (52px), espessuras ocupando três colunas; zoom sobe para (256px), sem sobrepor seletor de entrada. Até (350px), dock mede (286px), subtítulo desaparece e dica vazia sobe para 32% da altura.
 Em altura máxima (500px) com largura mínima (600px), instruções secundárias somem e zoom fica a (120px) da base. Modal mede no máximo (560px), limitado à janela com margem total (32px); conteúdo pode rolar. Breakpoints completos constam no sidecar.
 
 ## Elevation & Depth
@@ -94,6 +94,7 @@ Dock, paleta, banner e modal compartilham `--elevation`, registrado no sidecar. 
 `radius` é a curva recorrente de ferramentas e painéis; dock usa curvas próprias. Campos e exportação usam `action`; ação principal e espessuras usam `primary`. Amostras de cor e indicadores de espessura são circulares. Divisória do dock mede (1px × 28px).
 
 ## Components
+- **Entrada:** seletor textual Dedo/Caneta acima da instrução e do dock, sem acrescentar ferramentas ao dock. Grupo acessível “Desenhar com”; alvos mínimos (88 × 44px), superfície existente e seleção por `aria-pressed`, fundo e contorno. Caneta é padrão por sessão; Dedo habilita toque para tinta/borracha, mantendo gestos com dois dedos. Instruções e nome acessível do canvas acompanham a escolha. Reenquadramento reserva espaço para o seletor.
 - **Ferramentas:** alvo padrão (56px); zoom, fechar e ações superiores compactas usam (44px). Seleção usa `aria-pressed`, fundo e contorno interno (2px); mão e borracha têm pares de cor próprios. Hover só existe em dispositivos com hover; desabilitado usa opacidade (0.32).
 - **Foco:** botões, campos e canvas usam outline de (3px) em `accent`, afastado (4px). Não há estilo `:active` próprio, exceto cursor da mão no canvas.
 - **Espessuras e paleta:** três círculos (6/12/18px) representam traços (4/10/22); botões de espessura medem (44 × 52px), largura (48px) no mobile. Paleta tem quatro colunas, 16 amostras (48px), check e outline na seleção; cores claras usam check em `ink` e branco tem borda interna visível. “Outra cor” usa `input type="color"` nativo (72 × 48px). Altura da paleta é limitada à janela, com rolagem interna em telas baixas.

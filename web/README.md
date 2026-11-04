@@ -48,10 +48,10 @@ Mantenha a mesma URL para os testes: cada domínio/origem tem armazenamento pró
 - Catálogo usa artes existentes, sem regeneração: 100 temas atuais e seis revisões arquivadas. A coleção segue em revisão final com o responsável. Versões salvas são resolvidas por ID + versão exatos, sem substituir pela arte mais nova. Arquivo ausente bloqueia abertura/exportação daquele quadro, preservando dados.
 - Botão **Meus desenhos** no editor salva antes de voltar à galeria. Histórico e enquadramento são independentes por quadro; refazer sobrevive à troca, mas não ao fechamento do app. Erro de gravação mantém o desenho aberto para tentar novamente ou exportar.
 - Desenho da versão anterior aparece como **Desenho 1**, preservando sua chave `current`, formato V1, caneta, borracha, pressão e câmera. Guiados usam documentos V2; criação/exclusão usa índice V2 com numeração estável. Banco IndexedDB não é apagado nem muda de versão. Migração e limites de rollback: [`MIGRATION.md`](MIGRATION.md). Antes de atualizar no iPad, faça backup JSON e mantenha o mesmo domínio.
-- Caneta e botão principal do mouse desenham. Toque de dedo nunca cria tinta.
+- Seletor **Dedo / Caneta** acima das ferramentas escolhe a entrada. **Dedo** permite desenhar e apagar com um dedo (inclusive canetas reportadas pelo navegador como toque); caneta reconhecida e mouse continuam funcionando. **Caneta**, padrão ao abrir o app, bloqueia tinta por toque da mão. Escolha vale durante a sessão e não altera desenhos salvos. No modo Dedo, evite apoiar a palma: um toque isolado pode criar tinta.
 - **Escolher instrumento** abre quatro opções no mesmo espaço do dock: Canetinha original, Caneta (fina e opaca), Lápis (grão fino translúcido) e Giz de cera (textura mais grossa). Cada traço guarda seu instrumento, inclusive em miniaturas, PNG e backup/restauração. Todos funcionam nos três modos, com três espessuras e pressão quando disponível. Desenhos antigos não são convertidos nem regravados ao abrir; instrumentos desconhecidos são bloqueados, nunca reinterpretados.
 - Paleta oferece 16 cores rápidas e **Outra cor**, com seletor nativo para qualquer cor RGB. Escolher cor ou espessura retorna ao instrumento escolhido sem alterar traços anteriores; branco é tinta branca, não borracha. Cores personalizadas ficam nos traços e backups, sem migração de dados.
-- Dois dedos movimentam/ampliam. Mão permite arrastar com um dedo ou mouse; selecioná-la novamente retorna ao instrumento escolhido.
+- Dois dedos movimentam/ampliam nos dois modos de entrada. Ao apoiar o segundo dedo, o traço de toque em andamento é descartado para não deixar tinta do gesto. Retirar um dedo não retoma o desenho; levante ambos antes do próximo traço. Mão permite arrastar com um dedo ou mouse; selecioná-la novamente retorna ao instrumento escolhido.
 - Roda do mouse e botões +/− ajustam zoom. Reenquadrar considera os traços.
 - Teclado: Ctrl/Cmd+Z desfaz, Ctrl/Cmd+Shift+Z ou Ctrl/Cmd+Y refaz. Com o canvas focado, setas movem e +/− ampliam.
 - Traços concluídos são gravados imediatamente; viewport após 400 ms. O fechamento forçado pode interromper uma transação ainda em andamento. Só **Salvo neste aparelho** confirma a gravação.
@@ -62,7 +62,7 @@ Mantenha a mesma URL para os testes: cada domínio/origem tem armazenamento pró
 
 ## Aceite obrigatório no iPad
 
-1. Desenhar com a caneta usada pela criança, palma apoiada antes/durante/depois do traço. Dedo não deve pintar. Anotar se a caneta é reportada como toque: este protótipo não a transforma automaticamente em tinta.
+1. Em **Caneta**, desenhar com a caneta usada pela criança, palma apoiada antes/durante/depois do traço; dedo não deve pintar. Em **Dedo**, desenhar, apagar e desfazer com um dedo, sem apoiar a palma. Se a caneta for reportada como toque, usar Dedo; não há detecção automática.
 2. Desenhar rápido, curvas e pontos; testar pressão quando disponível. Verificar latência e fluidez por alguns minutos, sem presumir equivalência com PencilKit.
 3. Pinçar com dois dedos, retirar um, apoiar palma, voltar a desenhar; nenhum salto ou traço acidental. Mão deve mover com um dedo.
 4. Testar Canetinha, Caneta, Lápis e Giz de cera com 16 cores, **Outra cor**, três espessuras, pressão, borracha, desfazer/refazer e reenquadrar, em retrato/paisagem. Conferir seletor nativo no Safari, textura durante zoom e instrumento/cor após exportação/reabertura. Comparar fluidez com a canetinha original.
@@ -76,11 +76,13 @@ Mantenha a mesma URL para os testes: cada domínio/origem tem armazenamento pró
 
 `npm test`: 21 testes de documentos, instrumentos, cores, validação, histórico, geometria, catálogo/arquivos, backups e service worker.
 
-`npm run test:browser`: gera build e executa 22 cenários no Chromium headless. Requer o navegador do Playwright e suas bibliotecas de sistema; instale no ambiente de teste com `npx playwright install chromium` (no Linux, também as dependências indicadas pelo Playwright). O teste usa somente um servidor temporário em localhost e perfis isolados, sem modificar o perfil pessoal do navegador.
+`npm run test:browser`: gera build e executa 23 cenários no Chromium headless. Requer o navegador do Playwright e suas bibliotecas de sistema; instale no ambiente de teste com `npx playwright install chromium` (no Linux, também as dependências indicadas pelo Playwright). O teste usa somente um servidor temporário em localhost e perfis isolados, sem modificar o perfil pessoal do navegador.
 
 Cobertura: cinco tamanhos de tela, caneta/toque simulados, histórico, exportações, IndexedDB, conflito entre abas, corrupção, falhas/abortos, migração V1 sem perda, múltiplos quadros offline e subdiretório. Inclui comparação por pixels com a canetinha anterior, quatro instrumentos distintos, textura determinística, pressão/espessuras, preview/traço ativo/PNG, instrumentos desconhecidos e backup/restauração dos novos traços. Também cobre catálogo por categoria/modo, pixels das camadas/guia/borracha, versão arquivada, modelo ausente, restauração editável sem sobrescrita, exclusão cancelada/abortada/confirmada e numeração estável. Capturas ficam em `../.impeccable/review/`, fora da publicação. Testes não comprovam rejeição de palma física, comportamento do Safari instalado, latência ou retenção no iPad.
 
 ## Limites desta etapa
+
+Entrada por toque tem regressão para seletor Dedo/Caneta, tinta, borracha, transição para pinça sem tinta, cancelamento, mão, troca de entrada durante traço, prioridade/pressão de caneta e recarga. Validação física no iPad/Safari permanece pendente.
 
 Sem renomeação, nuvem, migração dos desenhos nativos, arco-íris ou balde. Galeria carrega documentos locais e usa miniaturas dos modelos; cache de imagens decodificadas limitado a oito entradas. Coleções e sessões muito grandes exigem avaliação de desempenho no hardware. Renderer do editor guarda traços em vetor e rasteriza apenas viewport. Não remover app Swift para testar.
 
